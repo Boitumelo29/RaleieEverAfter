@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+<!-- ENVELOPE -->
+<div class="envelope" id="envelope">
+
+ <div class="flap"></div>
+
+ <div class="letter">
+ <section class="invite-section" aria-label="Invitation details preview">
+ <div class="invite-section__card">
+ <header class="invite-section__header">
+ <p class="invite-kicker">You are invited</p>
+ <p class="invite-tagline">to the beginning of forever</p>
+ <div class="invite-divider" aria-hidden="true"></div>
+ <p class="invite-date">26 September 2026</p>
+ </header>
+
+ <div class="invite-section__main" aria-label="Invitation main content">
+ <div class="invite-union">
+ <p class="invite-union__title">The Union of</p>
+ <p class="invite-union__names">
+ Groom’s name<br />
+ <span class="invite-union__amp">&amp;</span><br />
+ Bride’s name
+ </p>
+ </div>
+
+ <div class="invite-strip" aria-hidden="true"></div>
+
+ <div class="invite-photo" aria-label="Couple photo">
+ <img src="people.png" alt="Boitumelo and partner" />
+ <div class="invite-photo__monogram" aria-hidden="true">TB</div>
+ </div>
+ </div>
+ </div>
+ </section>
+ </div>
+
+ <!-- CIRCLE SEAL -->
+ <div class="seal" id="seal">
+ <div class="tap-me" aria-hidden="true">Tap me</div>
+ </div>
+
+</div>
+
+<!-- INVITE CONTENT -->
+<div class="invite" id="invite">
+ <div class="invite-petals" aria-hidden="true">
+ <span class="invite-hero__petal p1"></span>
+ <span class="invite-hero__petal p2"></span>
+ <span class="invite-hero__petal p3"></span>
+ <span class="invite-hero__petal p4"></span>
+ <span class="invite-hero__petal p5"></span>
+ <span class="invite-hero__petal p6"></span>
+ </div>
+ <section class="invite-hero" aria-label="Wedding invitation">
+ <div class="invite-hero__card">
+ <div class="invite-hero__arch" aria-hidden="true"></div>
+ <div class="invite-hero__cream">
+ <div class="invite-hero__monogram" aria-label="BT monogram">
+ <span class="invite-hero__m-b">B</span>
+ <span class="invite-hero__m-t">T</span>
+ </div>
+ <p class="invite-hero__wedding">Wedding</p>
+ <p class="invite-hero__celebration">Celebration</p>
+ </div>
+ <div class="invite-hero__photo-wrap">
+ <img
+ class="invite-hero__photo"
+ src="people.png"
+ alt="Boitumelo and partner"
+ width="600"
+ height="800"
+ />
+ </div>
+ </div>
+ </section>
+
+ <section class="invite-section invite-section--transparent" aria-label="Invitation details">
+ <div class="invite-section__card">
+ <header class="invite-section__header">
+ <p class="invite-kicker">You are invited</p>
+ <p class="invite-tagline">to the beginning of forever</p>
+ <div class="invite-divider" aria-hidden="true"></div>
+ <div class="invite-date invite-countdown" data-date="2026-09-26T13:00:00+02:00">
+ <div class="countdown-container">
+ <!-- <h2>Countdown to 26 September 2026</h2> -->
+ <div class="countdown" aria-label="Countdown timer">
+ <div class="time-box">
+ <span id="headerDays">00</span>
+ <small>Days</small>
+ </div>
+ <div class="time-box">
+ <span id="headerHours">00</span>
+ <small>Hours</small>
+ </div>
+ <div class="time-box">
+ <span id="headerMinutes">00</span>
+ <small>Minutes</small>
+ </div>
+ <div class="time-box">
+ <span id="headerSeconds">00</span>
+ <small>Seconds</small>
+ </div>
+ </div>
+ <div class="message" id="headerMessage"></div>
+ </div>
+ </div>
+ </header>
+
+ <div class="invite-section__main" aria-label="Invitation main content">
+ <div class="invite-union">
+ <p class="invite-union__title">The Union of</p>
+ <p class="invite-union__names">
+ Groom’s name<br />
+ <span class="invite-union__amp">&amp;</span><br />
+ Bride’s name
+ </p>
+ </div>
+
+ <div class="invite-strip" aria-hidden="true"></div>
+
+ <div class="invite-photo" aria-label="Couple photo">
+ <img src="people.png" alt="Boitumelo and partner" />
+ <div class="invite-photo__monogram" aria-hidden="true">BT</div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <section class="details-section" aria-label="Event details panel">
+ <div class="details-bg">
+ <div class="details-card">
+ <p class="details-title">The Details</p>
+
+ <ul class="details-list">
+ <li class="details-row">
+ <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+ <path d="M7 3v2M17 3v2M4.5 7.5h15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+ <path d="M6.2 5.5h11.6c1 0 1.7.7 1.7 1.7v11.1c0 1-.7 1.7-1.7 1.7H6.2c-1 0-1.7-.7-1.7-1.7V7.2c0-1 .7-1.7 1.7-1.7Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+ </svg>
+ <span class="details-line" aria-hidden="true"></span>
+ <p class="details-value">
+ <!-- <span id="weddingCountdown" data-date="2026-09-26T13:00:00+02:00">Loading…</span><br /> -->
+ <span id="weddingDate" class="details-date">26/09/2026</span>
+ </p>
+ </li>
+
+ <li class="details-row">
+ <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+ <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor" stroke-width="1.6"/>
+ </svg>
+ <span class="details-line" aria-hidden="true"></span>
+ <p class="details-value">1 PM – 5 PM</p>
+ </li>
+
+ <li class="details-row">
+ <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+ <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+ <path d="M12 10.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="1.6"/>
+ </svg>
+ <span class="details-line" aria-hidden="true"></span>
+ <p class="details-value">Boksburg, Johannesburg</p>
+ </li>
+
+ <li class="details-row">
+ <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+ <path d="M3 11.5l18-7-7 18-2.7-7.8L3 11.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+ </svg>
+ <span class="details-line" aria-hidden="true"></span>
+ <p class="details-value">Travel &amp; accommodation: details to follow</p>
+ </li>
+
+ <li class="details-row">
+ <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+ <path d="M7.5 4.8h3.2l1 3.2-1.6 1.6c1.2 2.3 3.2 4.2 5.4 5.4l1.6-1.6 3.2 1v3.2c0 .9-.7 1.6-1.6 1.6A13.2 13.2 0 0 1 5.9 6.4c0-.9.7-1.6 1.6-1.6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+ </svg>
+ <span class="details-line" aria-hidden="true"></span>
+ <p class="details-value">Contact: +27 00 000 0000</p>
+ </li>
+ </ul>
+
+ <section class="palette-section" aria-label="Colour palette">
+ <div class="palette-card">
+ <p class="palette-title">COLOUR PALETTE:</p>
+ <p class="palette-subtitle">KINDLY REFER TO THE COLOURS BELOW AS A GUIDE</p>
+
+ <div class="palette-swatches" aria-label="Palette swatches">
+ <span class="swatch swatch--white" aria-label="White"></span>
+ <span class="swatch swatch--beige" aria-label="Beige"></span>
+ <span class="swatch swatch--sky" aria-label="Sky Blue"></span>
+ <span class="swatch swatch--teal" aria-label="Teal"></span>
+ <span class="swatch swatch--navy" aria-label="Navy"></span>
+ <span class="swatch swatch--mustard" aria-label="Mustard"></span>
+ <span class="swatch swatch--orange" aria-label="Burnt Orange"></span>
+ </div>
+ </div>
+ </section>
+ </div>
+ </div>
+ </section>
+
+ <section class="verse-section" aria-label="Spiritual message and registry">
+ <div class="verse-bg">
+ <div class="verse-top">
+ <div class="verse-emblem" aria-label="Monogram emblem">
+ <span>TB</span>
+ </div>
+
+ <p class="verse-quote">
+ “He who finds a <strong>wife</strong>, finds a <strong>good thing</strong> and obtains favour from the Lord”
+ </p>
+ <p class="verse-ref">Proverbs 18:22</p>
+ </div>
+
+ <div class="verse-bottom" aria-label="Photo and registry">
+ <div class="verse-photoFrame" aria-label="Couple photo frame">
+ <div class="verse-photoFrame__inner">
+ <img src="people.png" alt="Boitumelo and partner" />
+ </div>
+ </div>
+
+ <div class="verse-registry" aria-label="Registry options">
+ <p class="registry-text">
+ Your presence is our greatest gift. If you’d like to bless us further, please use the registry options below.
+ </p>
+
+ <ul class="registry-logos" aria-label="Registry stores">
+ <li class="registry-logo">Store One</li>
+ <li class="registry-logo">Store Two</li>
+ <li class="registry-logo">Store Three</li>
+ </ul>
+
+ <div class="registry-qrWrap">
+ <svg class="registry-arrow" viewBox="0 0 80 54" aria-hidden="true">
+ <path d="M4 40c18-18 34-24 56-20" />
+ <path d="M58 20c7 2 12 6 18 12" />
+ <path d="M72 33l4-2-2 4" />
+ </svg>
+
+ <div class="registry-qr" aria-label="QR code placeholder"></div>
+ <p class="registry-qrCaption">Scan to see registry</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+
+ <div class="section-divider" aria-hidden="true"></div>
+
+ <section class="promise-section" aria-label="Promise kept">
+ <div class="promise-phone">
+ <div class="promise-inner">
+ <p class="promise-monogram">T&nbsp;B</p>
+
+ <div class="promise-stage">
+ <div class="promise-arch" aria-hidden="true"></div>
+
+ <div class="promise-photo" aria-label="Couple portrait">
+ <img src="people.png" alt="Boitumelo and partner" />
+ </div>
+
+ 
+
+ </div>
+ </div>
+ </div>
+ </section>
+</div>
+
+<script>
+const seal = document.getElementById("seal");
+const envelope = document.getElementById("envelope");
+const invite = document.getElementById("invite");
+
+let isOpening = false;
+let countdownIntervalId = null;
+let headerCountdownIntervalId = null;
+
+// Show "Tap me" hint for 2 seconds (on the seal)
+seal.classList.add("show-tap");
+window.setTimeout(() => seal.classList.remove("show-tap"), 2000);
+
+function startHeaderCountdown() {
+ const container = document.querySelector(".invite-countdown");
+ if (!container) return;
+
+ const iso = container.getAttribute("data-date");
+ const target = iso ? new Date(iso) : null;
+ if (!target || Number.isNaN(target.getTime())) return;
+
+ const daysEl = document.getElementById("headerDays");
+ const hoursEl = document.getElementById("headerHours");
+ const minutesEl = document.getElementById("headerMinutes");
+ const secondsEl = document.getElementById("headerSeconds");
+ const messageEl = document.getElementById("headerMessage");
+ const countdownEl = container.querySelector(".countdown");
+
+ if (headerCountdownIntervalId !== null) {
+ window.clearInterval(headerCountdownIntervalId);
+ headerCountdownIntervalId = null;
+ }
+
+ const tick = () => {
+ const now = new Date().getTime();
+ const distance = target.getTime() - now;
+
+ if (distance <= 0) {
+ if (countdownEl) countdownEl.style.display = "none";
+ if (messageEl) messageEl.textContent = "The big day is here!";
+ if (headerCountdownIntervalId !== null) {
+ window.clearInterval(headerCountdownIntervalId);
+ headerCountdownIntervalId = null;
+ }
+ return;
+ }
+
+ const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+ const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+ const minutes = Math.floor((distance / (1000 * 60)) % 60);
+ const seconds = Math.floor((distance / 1000) % 60);
+
+ const pad2 = (n) => String(n).padStart(2, "0");
+ if (daysEl) daysEl.textContent = String(days);
+ if (hoursEl) hoursEl.textContent = pad2(hours);
+ if (minutesEl) minutesEl.textContent = pad2(minutes);
+ if (secondsEl) secondsEl.textContent = pad2(seconds);
+ if (messageEl) messageEl.textContent = "";
+ };
+
+ tick();
+ headerCountdownIntervalId = window.setInterval(tick, 1000);
+}
+
+function startWeddingCountdown() {
+ const el = document.getElementById("weddingCountdown");
+ if (!el) return;
+ const dateEl = document.getElementById("weddingDate");
+
+ const iso = el.getAttribute("data-date");
+ const target = iso ? new Date(iso) : null;
+ if (!target || Number.isNaN(target.getTime())) {
+ el.textContent = "26/09/2026";
+ return;
+ }
+
+ if (dateEl) {
+ const dd = String(target.getDate()).padStart(2, "0");
+ const mm = String(target.getMonth() + 1).padStart(2, "0");
+ const yyyy = String(target.getFullYear());
+ dateEl.textContent = `${dd}/${mm}/${yyyy}`;
+ }
+
+ if (countdownIntervalId !== null) {
+ window.clearInterval(countdownIntervalId);
+ countdownIntervalId = null;
+ }
+
+ const tick = () => {
+ const now = new Date();
+ const diff = target.getTime() - now.getTime();
+ if (diff <= 0) {
+ el.textContent = "It’s today!";
+ if (countdownIntervalId !== null) {
+ window.clearInterval(countdownIntervalId);
+ countdownIntervalId = null;
+ }
+ return;
+ }
+
+ const sec = Math.floor(diff / 1000);
+ const days = Math.floor(sec / 86400);
+ const hours = Math.floor((sec % 86400) / 3600);
+ const mins = Math.floor((sec % 3600) / 60);
+ const secs = sec % 60;
+
+ const pad = (n) => String(n).padStart(2, "0");
+ el.textContent = `${days}d ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
+ };
+
+ tick();
+ countdownIntervalId = window.setInterval(tick, 1000);
+}
+
+function openInvitation() {
+ if (isOpening) return;
+ isOpening = true;
+
+ seal.classList.add("is-hidden");
+ envelope.classList.add("open");
+
+ setTimeout(() => {
+ envelope.style.display = "none";
+ invite.classList.add("show");
+ document.body.classList.add("invite-open");
+ startHeaderCountdown();
+ startWeddingCountdown();
+ }, 1000);
+}
+
+// If the invite is already visible (e.g. refreshed while open), start countdown.
+if (invite.classList.contains("show")) {
+ document.body.classList.add("invite-open");
+ startHeaderCountdown();
+ startWeddingCountdown();
+}
+
+seal.addEventListener("click", (e) => {
+ e.stopPropagation();
+ openInvitation();
+});
+
+// Drag/swipe anywhere on the envelope to open
+let startX = null;
+let startY = null;
+const DRAG_THRESHOLD_PX = 22;
+
+envelope.addEventListener("pointerdown", (e) => {
+ if (isOpening) return;
+ startX = e.clientX;
+ startY = e.clientY;
+});
+
+envelope.addEventListener("pointermove", (e) => {
+ if (isOpening || startX === null || startY === null) return;
+ const dx = e.clientX - startX;
+ const dy = e.clientY - startY;
+ if (Math.hypot(dx, dy) >= DRAG_THRESHOLD_PX) {
+ openInvitation();
+ startX = null;
+ startY = null;
+ }
+});
+
+envelope.addEventListener("pointerup", () => {
+ startX = null;
+ startY = null;
+});
+
+envelope.addEventListener("pointercancel", () => {
+ startX = null;
+ startY = null;
+});
+</script>
+
+</body>
+</html>
