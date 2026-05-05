@@ -365,6 +365,8 @@ body.invite-open {
  color: #1B2A41;
  margin: 0;
  line-height: 1;
+position: relative;
+z-index: 3;
 }
 
 .invite-hero__celebration {
@@ -375,6 +377,8 @@ body.invite-open {
  text-transform: uppercase;
  color: #1B2A41;
  margin: 10px 0 0;
+position: relative;
+z-index: 3;
 }
 
 .invite-hero__body {
