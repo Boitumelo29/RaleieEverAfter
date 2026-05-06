@@ -1227,6 +1227,10 @@ body.invite-open {
  opacity: 0.78;
 }
 
+.invite-strip--after-main {
+ margin-top: 14px;
+}
+
 .invite-photo {
  position: relative;
  border-radius: 14px;
@@ -1271,20 +1275,12 @@ body.invite-open {
  border-radius: 0;
  overflow: hidden;
  padding: 24px 16px 12px;
- /* Palette base + warm motif (mustard/orange) */
- background-color: #1B2A41;
+ background: #FFFFFF;
  box-shadow: none;
 }
 
 .details-bg::before {
- content: "";
- position: absolute;
- inset: 0;
- background-color: var(--shweshwe-bg);
- background-image: var(--shweshwe);
- background-size: var(--shweshwe-size);
- opacity: 0.86;
- mix-blend-mode: normal;
+ content: none;
 }
 
 .details-bg::after {
@@ -1466,6 +1462,13 @@ body.invite-open {
  content: none;
 }
 
+.events-transition-divider {
+ width: min(78%, 520px);
+ height: 1px;
+ margin: 6px auto 34px;
+ background: linear-gradient(to right, rgba(27, 42, 65, 0), rgba(27, 42, 65, 0.2), rgba(27, 42, 65, 0));
+}
+
 .palette-section {
  margin: 16px 0 0;
  padding: 10px 0 6px;
@@ -1642,6 +1645,11 @@ body.invite-open {
  .details-card {
  border-radius: 42px 42px 16px 16px;
  padding: 30px 18px 26px;
+ }
+
+ .events-transition-divider {
+ width: min(82%, 360px);
+ margin: 4px auto 28px;
  }
 
  .details-editorial {
