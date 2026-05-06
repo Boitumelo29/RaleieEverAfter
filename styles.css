@@ -348,7 +348,7 @@ body.invite-open {
 
 @media (max-width: 720px) {
  .invite-hero {
- --invite-hero-arch-height: 240px;
+ --invite-hero-arch-height: clamp(260px, 70vw, 340px);
  }
 
  .invite-hero__card {
@@ -363,14 +363,12 @@ body.invite-open {
  }
 
  .invite-hero__cream {
- padding: 22px 18px 120px;
- align-items: center;
- text-align: center;
+ display: none;
  }
 
  .invite-hero__photo-wrap {
- bottom: 0;
- height: var(--invite-hero-arch-height);
+ inset: 10px 10px 0 10px;
+ height: auto;
  width: auto;
  }
 }
@@ -400,6 +398,7 @@ body.invite-open {
  background-size: var(--shweshwe-size);
  /* opacity: 0.95; */
  mix-blend-mode: normal;
+ z-index: 1;
 }
 
 .invite-hero__cream {
@@ -505,22 +504,23 @@ z-index: 3;
 
 .invite-hero__photo-wrap {
  position: absolute;
- left: 48%;
- bottom: 8px;
- transform: translateX(-50%);
- height: var(--invite-hero-arch-height);
+ inset: 12px 14px 0 14px;
+ height: auto;
  width: auto;
  z-index: 2;
  pointer-events: none;
  overflow: hidden;
- border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+ border-radius: 50% 50% 0 0 / 28% 28% 0 0;
 }
 
 .invite-hero__photo {
- width: auto;
+ width: 100%;
  height: 100%;
  display: block;
  filter: none;
+ object-fit: cover;
+ object-position: center top;
+ opacity: 0.94;
  /* Blend light studio background into navy/white behind */
  mix-blend-mode: normal;
 }
@@ -1503,7 +1503,7 @@ z-index: 3;
 
 @media (max-width: 640px) {
  .invite-hero {
- --invite-hero-arch-height: 220px;
+ --invite-hero-arch-height: clamp(250px, 74vw, 320px);
  }
 
  .invite-hero__card {
@@ -1518,9 +1518,7 @@ z-index: 3;
  }
 
  .invite-hero__cream {
- padding: 28px 24px 140px;
- align-items: center;
- text-align: center;
+ display: none;
  }
 
  .invite-hero__body {
@@ -1528,9 +1526,13 @@ z-index: 3;
  }
 
  .invite-hero__photo-wrap {
- bottom: 0;
- height: var(--invite-hero-arch-height);
+ inset: 8px 8px 0 8px;
+ height: auto;
  width: auto;
+ }
+
+ .invite-section {
+ margin-top: -12px;
  }
 }
 
