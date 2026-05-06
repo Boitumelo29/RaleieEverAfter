@@ -20,14 +20,22 @@
         <div class="curtain curtain--left" aria-hidden="true"></div>
         <div class="curtain curtain--right" aria-hidden="true"></div>
         <div class="curtain-sheen" aria-hidden="true"></div>
+        <div class="opening-intro" aria-label="Opening invitation">
+            <p class="opening-intro__kicker">The Wedding Of</p>
+            <div class="opening-intro__monogram" aria-label="Luxury monogram">
+                <span class="opening-intro__initial opening-intro__initial--left">T</span>
+                <span class="opening-intro__amp">&amp;</span>
+                <span class="opening-intro__initial opening-intro__initial--right">B</span>
+            </div>
 
-    
+            <div class="opening-control" aria-hidden="true">
+                <span class="opening-control__line"></span>
+                <div class="seal" id="seal" role="button" tabindex="0" aria-label="Open invitation"></div>
+                <span class="opening-control__line"></span>
+            </div>
 
-        <!-- CIRCLE SEAL -->
-        <div class="seal" id="seal">
-            <div class="tap-me" aria-hidden="true">Tap to Open</div>
+            <p class="tap-me">Part The Curtains</p>
         </div>
-
     </div>
 
     <!-- INVITE CONTENT -->
@@ -353,15 +361,18 @@
         const seal = document.getElementById("seal");
         const envelope = document.getElementById("envelope");
         const invite = document.getElementById("invite");
+        const openingIntro = document.querySelector(".opening-intro");
 
         let isOpening = false;
         let countdownIntervalId = null;
         let headerCountdownIntervalId = null;
         const CURTAIN_REVEAL_MS = 2300;
 
-        // Show "Tap me" hint for 2 seconds (on the seal)
-        seal.classList.add("show-tap");
-        window.setTimeout(() => seal.classList.remove("show-tap"), 2000);
+        // Show opening hint for 2 seconds.
+        if (openingIntro) {
+            openingIntro.classList.add("show-tap");
+            window.setTimeout(() => openingIntro.classList.remove("show-tap"), 2000);
+        }
 
         function startHeaderCountdown() {
             const container = document.querySelector(".invite-countdown");
@@ -591,6 +602,13 @@
         }
 
         seal.addEventListener("click", (e) => {
+            e.stopPropagation();
+            openInvitation();
+        });
+
+        seal.addEventListener("keydown", (e) => {
+            if (e.key !== "Enter" && e.key !== " ") return;
+            e.preventDefault();
             e.stopPropagation();
             openInvitation();
         });

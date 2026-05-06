@@ -35,8 +35,7 @@ body.invite-open {
  position: fixed;
  width: 100vw;
  height: 100vh;
- background:
- radial-gradient(120% 110% at 50% 50%, #223f82 0%, #153573 42%, #10265f 100%);
+ background: radial-gradient(120% 130% at 50% 45%, #2a478a 0%, #173a7a 40%, #0d255f 100%);
  display: grid;
  place-items: center;
  cursor: pointer;
@@ -47,32 +46,92 @@ body.invite-open {
  transition: background 420ms ease;
 }
 
-/* Tap hint on envelope flap (shows for 2s) */
-.tap-me {
- position: absolute;
- left: 50%;
- bottom: -34px;
- transform: translateX(-50%);
- min-width: 138px;
- height: 34px;
+/* Opening intro on curtain stage */
+.opening-intro {
+ position: relative;
+ z-index: 6;
+ width: min(88vw, 620px);
+ display: grid;
+ justify-items: center;
+ text-align: center;
+ gap: 20px;
+ padding-top: 7vh;
+ color: rgba(255, 252, 246, 0.95);
+ transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.opening-intro__kicker {
+ margin: 0;
  font-family: "Montserrat", sans-serif;
- font-size: 0.72rem;
- letter-spacing: 0.16em;
+ font-size: 0.62rem;
+ letter-spacing: 0.45em;
  text-transform: uppercase;
- color: rgba(255, 255, 255, 0.9);
- background: rgba(27, 42, 65, 0.42);
- border: 1px solid rgba(255, 255, 255, 0.18);
- padding: 0 16px;
- border-radius: 999px;
- display: flex;
+ color: rgba(244, 248, 255, 0.82);
+}
+
+.opening-intro__monogram {
+ position: relative;
+ width: min(92vw, 560px);
+ height: clamp(160px, 30vw, 230px);
+ display: grid;
+ place-items: center;
+}
+
+.opening-intro__initial {
+ position: absolute;
+ font-family: "Cormorant Garamond", "Georgia", serif;
+ font-size: clamp(5.3rem, 16vw, 8.9rem);
+ line-height: 1;
+ color: rgba(255, 252, 246, 0.92);
+ text-shadow: 0 12px 24px rgba(8, 18, 44, 0.28);
+}
+
+.opening-intro__initial--left {
+ left: 24%;
+ transform: translateX(-50%);
+}
+
+.opening-intro__initial--right {
+ right: 24%;
+ transform: translateX(50%);
+}
+
+.opening-intro__amp {
+ position: relative;
+ z-index: 2;
+ font-family: "Great Vibes", cursive;
+ font-size: clamp(3.2rem, 10vw, 5.4rem);
+ color: rgba(247, 232, 191, 0.9);
+ transform: translateY(-4px);
+ text-shadow: 0 8px 18px rgba(8, 18, 44, 0.32);
+}
+
+.opening-control {
+ width: min(76vw, 420px);
+ display: grid;
+ grid-template-columns: 1fr auto 1fr;
  align-items: center;
- justify-content: center;
- backdrop-filter: blur(6px);
+ gap: 14px;
+ margin-top: 6px;
+}
+
+.opening-control__line {
+ height: 1px;
+ background: linear-gradient(to right, rgba(245, 251, 255, 0), rgba(245, 251, 255, 0.5), rgba(245, 251, 255, 0));
+}
+
+.tap-me {
+ margin: 0;
+ font-family: "Montserrat", sans-serif;
+ font-size: 0.62rem;
+ letter-spacing: 0.32em;
+ text-transform: uppercase;
+ color: rgba(245, 250, 255, 0.78);
  opacity: 0;
  pointer-events: none;
 }
 
-.seal.show-tap .tap-me {
+.opening-intro.show-tap .tap-me {
  animation: tap-me-fade 2s ease forwards;
 }
 
@@ -89,8 +148,9 @@ body.invite-open {
  position: absolute;
  inset: 0;
  background:
- linear-gradient(90deg, rgba(9, 21, 50, 0.28) 49.6%,rgba(9, 21, 50, 0.28) 50%, rgba(9, 21, 50, 0.28) 50.4%),
- radial-gradient(100% 100% at 50% 8%,rgba(9, 21, 50, 0.28), rgba(9, 21, 50, 0.28) 52%);
+ linear-gradient(90deg, rgba(9, 21, 50, 0.1) 49.7%, rgba(244, 249, 255, 0.26) 50%, rgba(9, 21, 50, 0.1) 50.3%),
+ radial-gradient(100% 90% at 50% 6%, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0) 60%),
+ radial-gradient(120% 100% at 50% 100%, rgba(5, 14, 35, 0.36), rgba(5, 14, 35, 0) 50%);
  z-index: 1;
  pointer-events: none;
  transition: opacity 420ms ease;
@@ -101,15 +161,10 @@ body.invite-open {
  top: 0;
  width: 52%;
  height: 100%;
- z-index: 3;
+ z-index: 5;
  background:
- linear-gradient(90deg,
- rgba(10, 27, 66, 0.94) 0%,
- rgba(16, 40, 92, 0.94) 15%,
- rgba(29, 59, 120, 0.92) 33%,
- rgba(22, 48, 102, 0.92) 52%,
- rgba(8, 24, 59, 0.94) 100%);
- box-shadow: inset -20px 0 36px rgba(232, 240, 255, 0.12), inset 20px 0 38px rgba(6, 16, 38, 0.28);
+ linear-gradient(90deg, rgba(10, 28, 67, 0.95) 0%, rgba(22, 49, 108, 0.94) 25%, rgba(30, 62, 130, 0.92) 50%, rgba(17, 39, 90, 0.94) 100%);
+ box-shadow: inset -20px 0 36px rgba(232, 240, 255, 0.1), inset 20px 0 38px rgba(6, 16, 38, 0.3);
  transition: transform 2300ms cubic-bezier(0.16, 0.84, 0.22, 1);
  will-change: transform;
 }
@@ -121,11 +176,12 @@ body.invite-open {
  background:
  repeating-linear-gradient(
  90deg,
- rgba(228, 239, 255, 0.15) 0 2px,
- rgba(24, 47, 95, 0.08) 2px 20px,
- rgba(228, 239, 255, 0.09) 20px 24px
- );
- opacity: 0.9;
+ rgba(235, 243, 255, 0.12) 0 2px,
+ rgba(24, 47, 95, 0.05) 2px 18px,
+ rgba(232, 241, 255, 0.08) 18px 22px
+ ),
+ radial-gradient(65% 90% at 50% 10%, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0) 72%);
+ opacity: 0.92;
 }
 
 .curtain--left {
@@ -161,7 +217,7 @@ body.invite-open {
  rgba(255, 250, 242, 0.08) 84%,
  rgba(255, 252, 246, 0.85));
  filter: blur(0.2px);
- z-index: 4;
+ z-index: 7;
  opacity: 0.95;
  transition: opacity 540ms ease;
  pointer-events: none;
@@ -207,40 +263,37 @@ body.invite-open {
  padding: 16px;
  border-radius: 16px;
  }
-
- .seal {
- width: 124px;
- height: 68px;
- font-size: 1rem;
- }
 }
 
-/* WAX SEAL (OVAL BUTTON) */
+/* Center reveal pull */
 .seal {
- position: absolute;
- width: 94px;
- height: 66px;
+ position: relative;
+ width: 42px;
+ height: 42px;
  border-radius: 999px;
- background: radial-gradient(circle at 30% 30%, rgba(238, 213, 152, 0.98), rgba(231, 111, 81, 0.98));
- display: flex;
- align-items: center;
- justify-content: center;
- color: white;
- font-size: 1.1rem;
- font-weight: bold;
- z-index: 5;
- box-shadow: 0 8px 20px rgba(0,0,0,0.22);
- transition: transform 0.3s ease;
+ border: 1px solid rgba(245, 250, 255, 0.75);
+ background: radial-gradient(circle at 30% 30%, rgba(246, 251, 255, 0.58), rgba(228, 238, 255, 0.16));
+ backdrop-filter: blur(4px);
+ z-index: 8;
+ box-shadow: 0 5px 18px rgba(7, 18, 44, 0.32);
+ transition: transform 280ms ease, box-shadow 280ms ease, background 280ms ease;
  animation: seal-pulse 2.6s ease-in-out infinite;
 }
 
 .seal:hover {
- transform: scale(1.08);
+ transform: scale(1.06);
+ box-shadow: 0 8px 24px rgba(7, 18, 44, 0.4);
+ background: radial-gradient(circle at 30% 30%, rgba(246, 251, 255, 0.72), rgba(228, 238, 255, 0.22));
+}
+
+.seal:focus-visible {
+ outline: 2px solid rgba(247, 232, 191, 0.9);
+ outline-offset: 2px;
 }
 
 .seal.is-hidden {
  animation: none;
- transform: scale(0.6);
+ transform: scale(0.65);
  opacity: 0;
  transition: opacity 180ms ease, transform 180ms ease;
  pointer-events: none;
@@ -259,8 +312,9 @@ body.invite-open {
  opacity: 0;
 }
 
-.open .letter {
- transform: translateY(0) scale(1.01);
+.open .opening-intro {
+ opacity: 0;
+ transform: translateY(-10px);
 }
 
 .open.envelope {
@@ -282,8 +336,51 @@ body.invite-open {
 }
 
 @keyframes seal-pulse {
- 0%, 100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
- 50% { transform: scale(1.06); box-shadow: 0 14px 30px rgba(0,0,0,0.18); }
+ 0%, 100% { transform: scale(1); box-shadow: 0 5px 18px rgba(7, 18, 44, 0.32); }
+ 50% { transform: scale(1.05); box-shadow: 0 9px 24px rgba(7, 18, 44, 0.4); }
+}
+
+@media (max-width: 640px) {
+ .opening-intro {
+ gap: 16px;
+ padding-top: 10vh;
+ width: min(92vw, 520px);
+ }
+
+ .opening-intro__kicker {
+ font-size: 0.56rem;
+ letter-spacing: 0.34em;
+ }
+
+ .opening-intro__monogram {
+ height: clamp(130px, 34vw, 190px);
+ }
+
+ .opening-intro__initial {
+ font-size: clamp(4.2rem, 20vw, 6.3rem);
+ }
+
+ .opening-intro__initial--left {
+ left: 26%;
+ }
+
+ .opening-intro__initial--right {
+ right: 26%;
+ }
+
+ .opening-intro__amp {
+ font-size: clamp(2.8rem, 13vw, 4.4rem);
+ }
+
+ .opening-control {
+ width: min(84vw, 360px);
+ gap: 10px;
+ }
+
+ .tap-me {
+ font-size: 0.55rem;
+ letter-spacing: 0.24em;
+ }
 }
 
 .invite.show .invite-section__header > *,
