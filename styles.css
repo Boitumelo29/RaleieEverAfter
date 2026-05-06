@@ -1327,16 +1327,16 @@ body.invite-open {
  display: grid;
  justify-items: center;
  text-align: center;
- gap: 20px;
+ gap: 0;
 }
 
 .details-block {
  display: grid;
- gap: 8px;
+ gap: 5px;
 }
 
 .details-block--date {
- gap: 10px;
+ gap: 4px;
  margin-bottom: 4px;
 }
 
@@ -1364,7 +1364,7 @@ body.invite-open {
  line-height: 1.02;
  display: grid;
  justify-items: center;
- gap: 6px;
+ gap: 2px;
  max-width: 12ch;
  margin: 0 auto;
 }
@@ -1373,9 +1373,10 @@ body.invite-open {
  margin: 0;
  font-family: "Montserrat", sans-serif;
  font-size: 0.62rem;
- letter-spacing: 0.36em;
+ letter-spacing: 0.32em;
  text-transform: uppercase;
  color: rgba(27, 42, 65, 0.66);
+ padding-top: 1px;
 }
 
 .details-date {
@@ -1389,15 +1390,24 @@ body.invite-open {
 .details-date--month {
  font-family: "Montserrat", sans-serif;
  font-size: 0.34em;
- letter-spacing: 0.38em;
+ letter-spacing: 0.34em;
  text-transform: uppercase;
  color: rgba(27, 42, 65, 0.74);
 }
 
 .details-date--year {
  font-size: 0.62em;
- letter-spacing: 0.18em;
+ letter-spacing: 0.14em;
  color: rgba(27, 42, 65, 0.82);
+}
+
+.details-editorial .details-block:nth-child(1) {
+ margin-bottom: 24px;
+}
+
+.details-editorial .details-block:nth-child(2),
+.details-editorial .details-block:nth-child(3) {
+ margin-bottom: 18px;
 }
 
 .details-card--reveal {
@@ -1468,14 +1478,12 @@ body.invite-open {
 }
 
 .palette-subtitle {
- margin: 10px auto 0;
- max-width: 36ch;
- font-family: "Montserrat", sans-serif;
- font-size: 0.5rem;
- letter-spacing: 0.2em;
- line-height: 1.7;
- text-transform: uppercase;
- color: rgba(27, 42, 65, 0.58);
+    margin: 0;
+    font-family: "Cormorant Garamond", "Georgia", serif;
+    font-size: clamp(1.0rem, 3.4vw, 1.85rem);
+    letter-spacing: 0.03em;
+    color: #1B2A41;
+    line-height: 1.2;
 }
 
 .palette-swatches {
