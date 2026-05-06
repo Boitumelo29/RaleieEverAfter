@@ -1437,24 +1437,33 @@ body.invite-open {
 .details-card--reveal.is-visible .details-block:nth-child(3) { transition-delay: 220ms; }
 .details-card--reveal.is-visible .details-block:nth-child(4) { transition-delay: 290ms; }
 
+.events-section {
+ max-width: 720px;
+ margin: 0 auto;
+ padding: 0 18px;
+}
+
+.events-bg {
+ background: #FFFFFF;
+ padding: 48px 34px 54px;
+ border-radius: 0;
+ overflow: hidden;
+}
+
 .events-editorial {
  position: relative;
- z-index: 1;
- margin: 18px 0 0;
- padding: 6px 0 0;
+ z-index: 2;
+ width: 100%;
+ max-width: none;
+ margin: 0;
+ padding: 0;
+ background: #FFFFFF;
+ background-image: none;
+ mix-blend-mode: normal;
 }
 
 .events-editorial::before {
- content: "";
- position: absolute;
- left: 50%;
- top: 40%;
- width: min(86%, 440px);
- height: 180px;
- transform: translate(-50%, -50%);
- background: radial-gradient(ellipse at center, rgba(27, 42, 65, 0.08), rgba(27, 42, 65, 0));
- filter: blur(20px);
- pointer-events: none;
+ content: none;
 }
 
 .palette-section {
@@ -1653,9 +1662,17 @@ body.invite-open {
  letter-spacing: 0.24em;
  }
 
+ .events-section {
+ padding: 0 18px;
+ }
+
+ .events-bg {
+ padding: 34px 18px 38px;
+ }
+
  .events-editorial {
- margin-top: 16px;
- padding-top: 6px;
+ margin: 0;
+ padding: 0;
  }
 
  .palette-section {
