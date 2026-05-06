@@ -1562,8 +1562,9 @@ body.invite-open {
 }
 
 .details-editorial .details-block:nth-child(1) .details-label:first-of-type {
- font-size: 0.58rem;
- letter-spacing: 0.34em;
+ font-size: 1.5rem;
+ letter-spacing: 0.03em;
+ line-height: 1;
  color: rgba(27, 42, 65, 0.66);
 }
 
