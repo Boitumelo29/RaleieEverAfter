@@ -21,6 +21,7 @@
         <div class="curtain curtain--right" aria-hidden="true"></div>
         <div class="curtain-sheen" aria-hidden="true"></div>
 
+        <!--
         <div class="letter">
             <section class="invite-section" aria-label="Invitation details preview">
                 <div class="invite-section__card">
@@ -48,6 +49,7 @@
                 </div>
             </section>
         </div>
+        -->
 
         <!-- CIRCLE SEAL -->
         <div class="seal" id="seal">
@@ -92,45 +94,54 @@
                 <header class="invite-section__header">
                     <p class="invite-kicker">You are invited</p>
                      <div class="invite-union">
-                        <p class="invite-union__title">A new chapter begins</p>
                         <p class="invite-union__names">
-                            Thabiso <span class="invite-union__amp">&amp;</span> Boitumelo
+                            <span class="invite-union__name-line">Thabiso</span>
+                            <span class="invite-union__amp">&amp;</span>
+                            <span class="invite-union__name-line">Boitumelo</span>
                         </p>
-                        <p class="invite-union__subtitle">Celebrating love, laughter and forever</p>
+                        <div class="invite-ornament" aria-hidden="true">✦</div>
+                        <p class="invite-union__subtitle">
+                            <span>Celebrating love,</span>
+                            <span>laughter and forever</span>
+                        </p>
                     </div>
-                    <!-- <div class="invite-ornament" aria-hidden="true">❦</div> -->
                 
-                    <div class="invite-date invite-countdown" data-date="2026-09-26T13:00:00+02:00">
-                        <div class="countdown-container">
-                            <p class="countdown-date-line">
-                                <span class="countdown-date-text">26 September 2026</span>
-                            </p>
-                            <p class="countdown-heading">Wedding Countdown</p>
-                            <div class="countdown" aria-label="Countdown timer">
-                                <div class="time-box">
-                                    <span id="headerDays">00</span>
-                                    <small>Days</small>
-                                </div>
-                                <span class="countdown-separator" aria-hidden="true"></span>
-                                <div class="time-box">
-                                    <span id="headerHours">00</span>
-                                    <small>Hours</small>
-                                </div>
-                                <span class="countdown-separator" aria-hidden="true"></span>
-                                <div class="time-box">
-                                    <span id="headerMinutes">00</span>
-                                    <small>Minutes</small>
-                                </div>
-                                <span class="countdown-separator" aria-hidden="true"></span>
-                                <div class="time-box">
-                                    <span id="headerSeconds">00</span>
-                                    <small>Seconds</small>
-                                </div>
-                            </div>
-                            <div class="message" id="headerMessage"></div>
-                        </div>
-                    </div>
                 </header>
+
+                <section class="editorial-countdown invite-countdown" data-date="2026-09-26T13:00:00+02:00"
+                    aria-label="Wedding date and countdown">
+                    <div class="editorial-countdown__divider" aria-hidden="true"></div>
+                    <div class="editorial-countdown__inner">
+                        <p class="editorial-countdown__date">
+                            <span class="editorial-countdown__day">26</span>
+                            <span class="editorial-countdown__month">SEPTEMBER</span>
+                            <span class="editorial-countdown__year">2026</span>
+                        </p>
+                        <p class="editorial-countdown__heading">WEDDING COUNTDOWN</p>
+                        <div class="countdown editorial-countdown__timer" aria-label="Countdown timer">
+                            <div class="time-box">
+                                <span id="headerDays">00</span>
+                                <small>Days</small>
+                            </div>
+                            <span class="editorial-countdown__dot" aria-hidden="true"></span>
+                            <div class="time-box">
+                                <span id="headerHours">00</span>
+                                <small>Hours</small>
+                            </div>
+                            <span class="editorial-countdown__dot" aria-hidden="true"></span>
+                            <div class="time-box">
+                                <span id="headerMinutes">00</span>
+                                <small>Mins</small>
+                            </div>
+                            <span class="editorial-countdown__dot" aria-hidden="true"></span>
+                            <div class="time-box">
+                                <span id="headerSeconds">00</span>
+                                <small>Secs</small>
+                            </div>
+                        </div>
+                        <div class="message" id="headerMessage"></div>
+                    </div>
+                </section>
 
                 <div class="invite-section__main" aria-label="Invitation main content">
                     <!-- <div class="invite-union">
@@ -155,81 +166,83 @@
 
         <section class="details-section" aria-label="Event details panel">
             <div class="details-bg">
-                <div class="details-card">
+                <div class="details-card details-card--reveal">
                     <p class="details-title">The Details</p>
+                    <div class="details-ornament" aria-hidden="true">✧</div>
 
-                    <ul class="details-list">
-                        <li class="details-row">
-                            <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M7 3v2M17 3v2M4.5 7.5h15" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linecap="round" />
-                                <path
-                                    d="M6.2 5.5h11.6c1 0 1.7.7 1.7 1.7v11.1c0 1-.7 1.7-1.7 1.7H6.2c-1 0-1.7-.7-1.7-1.7V7.2c0-1 .7-1.7 1.7-1.7Z"
-                                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-                            </svg>
-                            <span class="details-line" aria-hidden="true"></span>
-                            <p class="details-value">
-                                <!-- <span id="weddingCountdown" data-date="2026-09-26T13:00:00+02:00">Loading…</span><br /> -->
-                                <span id="weddingDate" class="details-date">26/09/2026</span>
+                    <div class="details-editorial">
+                        <div class="details-block details-block--date">
+                            <p class="details-main details-main--date">
+                                <span id="weddingDay" class="details-date details-date--day">26</span>
+                                <span id="weddingMonth" class="details-date details-date--month">SEPTEMBER</span>
+                                <span id="weddingYear" class="details-date details-date--year">2026</span>
                             </p>
-                        </li>
-
-                        <li class="details-row">
-                            <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                                <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" stroke="currentColor"
-                                    stroke-width="1.6" />
-                            </svg>
-                            <span class="details-line" aria-hidden="true"></span>
-                            <p class="details-value">1 PM – 5 PM</p>
-                        </li>
-
-                        <li class="details-row">
-                            <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z" stroke="currentColor"
-                                    stroke-width="1.6" stroke-linejoin="round" />
-                                <path d="M12 10.2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor"
-                                    stroke-width="1.6" />
-                            </svg>
-                            <span class="details-line" aria-hidden="true"></span>
-                            <p class="details-value">Boksburg, Johannesburg</p>
-                        </li>
-
-                        <li class="details-row">
-                            <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path d="M3 11.5l18-7-7 18-2.7-7.8L3 11.5Z" stroke="currentColor" stroke-width="1.6"
-                                    stroke-linejoin="round" />
-                            </svg>
-                            <span class="details-line" aria-hidden="true"></span>
-                            <p class="details-value">Travel &amp; accommodation: details to follow</p>
-                        </li>
-
-                        <li class="details-row">
-                            <svg class="details-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                                <path
-                                    d="M7.5 4.8h3.2l1 3.2-1.6 1.6c1.2 2.3 3.2 4.2 5.4 5.4l1.6-1.6 3.2 1v3.2c0 .9-.7 1.6-1.6 1.6A13.2 13.2 0 0 1 5.9 6.4c0-.9.7-1.6 1.6-1.6Z"
-                                    stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
-                            </svg>
-                            <span class="details-line" aria-hidden="true"></span>
-                            <p class="details-value">Contact: +27 00 000 0000</p>
-                        </li>
-                    </ul>
-
-                    <section class="palette-section" aria-label="Colour palette">
-                        <div class="palette-card">
-                            <p class="palette-title">COLOUR PALETTE:</p>
-                            <p class="palette-subtitle">KINDLY REFER TO THE COLOURS BELOW AS A GUIDE</p>
-
-                            <div class="palette-swatches" aria-label="Palette swatches">
-                                <span class="swatch swatch--beige" aria-label="Beige"></span>
-                                <span class="swatch swatch--sky" aria-label="Sky Blue"></span>
-                                <span class="swatch swatch--teal" aria-label="Teal"></span>
-                                <span class="swatch swatch--navy" aria-label="Navy"></span>
-                                <span class="swatch swatch--mustard" aria-label="Mustard"></span>
-                                <span class="swatch swatch--orange" aria-label="Burnt Orange"></span>
-                            </div>
+                            <p class="details-sub">Saturday</p>
                         </div>
+
+                        <div class="details-block">
+                            <p class="details-label">Time</p>
+                            <p class="details-main">12:00 PM</p>
+                        </div>
+
+                        <div class="details-block">
+                            <p class="details-label">Location</p>
+                            <p class="details-main">Boksburg, Johannesburg</p>
+                        </div>
+
+                        <div class="details-block">
+                            <p class="details-label">Contact Number</p>
+                            <p class="details-main">+27 00 000 0000</p>
+                        </div>
+                    </div>
+                    <div class="palette-card">
+                        <p class="palette-title">COLOUR PALETTE:</p>
+                        <p class="palette-subtitle">
+                            KINDLY REFER TO THE COLOURS BELOW AS A GUIDE
+                        </p>
+
+                        <div class="palette-swatches" aria-label="Palette swatches">
+                            <span class="swatch swatch--beige"></span>
+                            <span class="swatch swatch--sky"></span>
+                            <span class="swatch swatch--teal"></span>
+                            <span class="swatch swatch--navy"></span>
+                            <span class="swatch swatch--mustard"></span>
+                            <span class="swatch swatch--orange"></span>
+                        </div>
+                    </div>
+                    <section class="palette-section" aria-label="Colour palette">
+                       
+                    </section>
+
+                    <section class="events-editorial" aria-label="Order of events">
+                    <p class="events-kicker">Order of Events</p>
+                    <p class="events-title">How the Day Unfolds</p>
+
+                    <div class="events-timeline">
+                        <article class="events-item">
+                            <p class="events-time">3:00 PM</p>
+                            <h3 class="events-event">The Ceremony</h3>
+                            <p class="events-note">“Two lives, one breath, one forever.”</p>
+                        </article>
+
+                        <article class="events-item">
+                            <p class="events-time">4:15 PM</p>
+                            <h3 class="events-event">The First Kiss</h3>
+                            <p class="events-note">“The world held its breath — and so did we.”</p>
+                        </article>
+
+                        <article class="events-item">
+                            <p class="events-time">5:00 PM</p>
+                            <h3 class="events-event">Golden Hour Portraits</h3>
+                            <p class="events-note">“In the softest light, only love is visible.”</p>
+                        </article>
+
+                        <article class="events-item">
+                            <p class="events-time">5:30 PM</p>
+                            <h3 class="events-event">Welcome Drinks</h3>
+                            <p class="events-note">“Raise a glass to the ones who made it here.”</p>
+                        </article>
+                    </div>
                     </section>
                 </div>
             </div>
@@ -383,6 +396,7 @@
         let isOpening = false;
         let countdownIntervalId = null;
         let headerCountdownIntervalId = null;
+        const CURTAIN_REVEAL_MS = 2300;
 
         // Show "Tap me" hint for 2 seconds (on the seal)
         seal.classList.add("show-tap");
@@ -442,7 +456,9 @@
         function startWeddingCountdown() {
             const el = document.getElementById("weddingCountdown");
             if (!el) return;
-            const dateEl = document.getElementById("weddingDate");
+            const dayEl = document.getElementById("weddingDay");
+            const monthEl = document.getElementById("weddingMonth");
+            const yearEl = document.getElementById("weddingYear");
 
             const iso = el.getAttribute("data-date");
             const target = iso ? new Date(iso) : null;
@@ -451,11 +467,16 @@
                 return;
             }
 
-            if (dateEl) {
+            if (dayEl || monthEl || yearEl) {
                 const dd = String(target.getDate()).padStart(2, "0");
-                const mm = String(target.getMonth() + 1).padStart(2, "0");
                 const yyyy = String(target.getFullYear());
-                dateEl.textContent = `${dd}/${mm}/${yyyy}`;
+                const month = target
+                    .toLocaleString("en-US", { month: "long" })
+                    .toUpperCase();
+
+                if (dayEl) dayEl.textContent = dd;
+                if (monthEl) monthEl.textContent = month;
+                if (yearEl) yearEl.textContent = yyyy;
             }
 
             if (countdownIntervalId !== null) {
@@ -561,21 +582,42 @@
             carousel.dataset.initialized = "true";
         }
 
+        function initDetailsReveal() {
+            const revealEls = Array.from(document.querySelectorAll(".details-card--reveal"));
+            if (revealEls.length === 0) return;
+
+            if (!("IntersectionObserver" in window)) {
+                revealEls.forEach((el) => el.classList.add("is-visible"));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                });
+            }, { threshold: 0.25 });
+
+            revealEls.forEach((el) => observer.observe(el));
+        }
+
         function openInvitation() {
             if (isOpening) return;
             isOpening = true;
 
             seal.classList.add("is-hidden");
             envelope.classList.add("open");
+            invite.classList.add("show");
+            document.body.classList.add("invite-open");
+            startHeaderCountdown();
+            startWeddingCountdown();
+            initPromiseCarousel();
+            initDetailsReveal();
 
-            setTimeout(() => {
+            window.setTimeout(() => {
                 envelope.style.display = "none";
-                invite.classList.add("show");
-                document.body.classList.add("invite-open");
-                startHeaderCountdown();
-                startWeddingCountdown();
-                initPromiseCarousel();
-            }, 1000);
+            }, CURTAIN_REVEAL_MS);
         }
 
         // If the invite is already visible (e.g. refreshed while open), start countdown.
@@ -584,6 +626,7 @@
             startHeaderCountdown();
             startWeddingCountdown();
             initPromiseCarousel();
+            initDetailsReveal();
         }
 
         seal.addEventListener("click", (e) => {
