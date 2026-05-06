@@ -448,10 +448,12 @@ body.invite-open {
  font-family: "Great Vibes", cursive;
  font-size: clamp(3rem, 8vw, 4.25rem);
  color: #1B2A41;
- margin: 0;
+ margin: 10px 0 0;
  line-height: 1;
-position: relative;
-z-index: 3;
+ position: relative;
+ z-index: 3;
+ align-self: center;
+ text-align: center;
 }
 
 .invite-hero__celebration {
@@ -462,8 +464,10 @@ z-index: 3;
  text-transform: uppercase;
  color: #1B2A41;
  margin: 10px 0 0;
-position: relative;
-z-index: 3;
+ position: relative;
+ z-index: 3;
+ align-self: center;
+ text-align: center;
 }
 
 .invite-hero__body {
@@ -697,74 +701,166 @@ z-index: 3;
 
 /* Countdown block inside invite header */
 .invite-countdown .countdown-container {
- background: rgba(255, 255, 255, 0.9);
- padding: 18px 16px;
- border-radius: 18px;
- display: inline-block;
+ width: min(100%, 700px);
+ margin: 0 auto;
+ padding: 10px 8px 8px;
+ border-radius: 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 22px;
  text-align: center;
 }
 
-.invite-countdown h2 {
- margin: 0 0 12px;
+.invite-countdown .countdown-heading {
+ margin: 0;
  font-family: "Montserrat", sans-serif;
- font-size: 0.9rem;
+ font-size: 0.7rem;
  color: #1B2A41;
- letter-spacing: 0.06em;
+ letter-spacing: 0.4em;
  text-transform: uppercase;
- font-weight: 700;
+ font-weight: 500;
 }
 
 .invite-countdown .countdown {
  display: flex;
- gap: 10px;
+ align-items: flex-start;
+ gap: 12px;
  justify-content: center;
- flex-wrap: wrap;
+ flex-wrap: nowrap;
 }
 
 .invite-countdown .time-box {
- background: #1B2A41;
- color: #FFFFFF;
- width: 78px;
- padding: 12px 8px;
- border-radius: 14px;
+ color: #1B2A41;
+ min-width: 78px;
+ padding: 0;
 }
 
 .invite-countdown .time-box span {
  display: block;
- font-family: "Montserrat", sans-serif;
- font-size: 1.4rem;
- font-weight: 800;
- line-height: 1.05;
+ font-family: "Georgia", "Times New Roman", serif;
+ font-size: clamp(2rem, 6vw, 3rem);
+ font-weight: 500;
+ line-height: 1;
+ letter-spacing: 0.02em;
 }
 
 .invite-countdown .time-box small {
  display: block;
- margin-top: 6px;
+ margin-top: 8px;
  font-family: "Montserrat", sans-serif;
- font-size: 0.7rem;
+ font-size: 0.64rem;
  text-transform: uppercase;
- letter-spacing: 0.12em;
- color: #E9C46A;
- font-weight: 700;
+ letter-spacing: 0.28em;
+ color: rgba(27, 42, 65, 0.75);
+ font-weight: 600;
+}
+
+.invite-countdown .countdown-separator {
+ width: 8px;
+ height: 8px;
+ border-radius: 999px;
+ background: rgba(27, 42, 65, 0.45);
+ margin-top: 22px;
+ flex: 0 0 auto;
+}
+
+.invite-countdown .countdown-date-line {
+ margin: 2px 0 0;
+ width: min(100%, 420px);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 14px;
+}
+
+.invite-countdown .countdown-date-line::before,
+.invite-countdown .countdown-date-line::after {
+ content: "";
+ flex: 1;
+ height: 1px;
+ background: linear-gradient(to right, transparent, rgba(27, 42, 65, 0.28));
+}
+
+.invite-countdown .countdown-date-line::after {
+ background: linear-gradient(to left, transparent, rgba(27, 42, 65, 0.28));
+}
+
+.invite-countdown .countdown-date-text {
+ font-family: "Great Vibes", cursive;
+ font-size: clamp(1.35rem, 4vw, 1.8rem);
+ color: #1B2A41;
+ white-space: nowrap;
 }
 
 .invite-countdown .message {
- margin-top: 10px;
+ min-height: 1.2em;
+ margin: 0;
  font-family: "Montserrat", sans-serif;
- font-size: 0.9rem;
+ font-size: 0.8rem;
  color: #E76F51;
- font-weight: 800;
+ font-weight: 700;
+ letter-spacing: 0.04em;
+}
+
+.invite-countdown .countdown-scroll-indicator {
+ width: 34px;
+ height: 34px;
+ border-radius: 999px;
+ border: 1px solid rgba(27, 42, 65, 0.22);
+ display: grid;
+ place-items: center;
+ opacity: 0.86;
+}
+
+.invite-countdown .countdown-scroll-indicator span {
+ width: 6px;
+ height: 6px;
+ border-right: 1.5px solid rgba(27, 42, 65, 0.65);
+ border-bottom: 1.5px solid rgba(27, 42, 65, 0.65);
+ transform: rotate(45deg) translateY(-1px);
 }
 
 @media (max-width: 420px) {
- .invite-countdown .time-box {
- width: 68px;
- padding: 10px 6px;
- border-radius: 12px;
+ .invite-countdown .countdown-container {
+ gap: 16px;
  }
 
- .invite-countdown h2 {
- font-size: 0.82rem;
+ .invite-countdown .countdown-heading {
+ letter-spacing: 0.32em;
+ }
+
+ .invite-countdown .countdown {
+ gap: 8px;
+ }
+
+ .invite-countdown .time-box {
+ min-width: 64px;
+ }
+
+ .invite-countdown .time-box span {
+ font-size: clamp(1.65rem, 8.4vw, 2.2rem);
+ }
+
+ .invite-countdown .time-box small {
+ letter-spacing: 0.2em;
+ font-size: 0.58rem;
+ }
+
+ .invite-countdown .countdown-separator {
+ width: 6px;
+ height: 6px;
+ margin-top: 18px;
+ }
+
+ .invite-countdown .countdown-date-line {
+ gap: 10px;
+ width: min(100%, 320px);
+ }
+
+ .invite-countdown .countdown-scroll-indicator {
+ width: 30px;
+ height: 30px;
  }
 }
 
