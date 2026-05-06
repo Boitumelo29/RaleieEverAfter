@@ -17,8 +17,9 @@
 <body>
     <!-- ENVELOPE -->
     <div class="envelope" id="envelope">
-
-        <div class="flap"></div>
+        <div class="curtain curtain--left" aria-hidden="true"></div>
+        <div class="curtain curtain--right" aria-hidden="true"></div>
+        <div class="curtain-sheen" aria-hidden="true"></div>
 
         <div class="letter">
             <section class="invite-section" aria-label="Invitation details preview">
@@ -39,10 +40,8 @@
                                 Boitumelo
                             </p>
                         </div>
-
                         <div class="invite-strip" aria-hidden="true"></div>
-
-                        <div class="invite-photo" aria-label="Couple photo">
+                        <div class        ="invite-photo" aria-label="Couple photo">
                             <img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-2.jpg"
                                 alt="Thabiso and Boitumelo" />
                             <div class="invite-photo__monogram" aria-hidden="true">TB</div>
@@ -54,36 +53,36 @@
 
         <!-- CIRCLE SEAL -->
         <div class="seal" id="seal">
-            <div class="tap-me" aria-hidden="true">Tap me</div>
+            <div class="tap-me" aria-hidden="true">Tap</div>
         </div>
 
     </div>
 
     <!-- INVITE CONTENT -->
     <div class="invite" id="invite">
-        <div class="invite-petals" aria-hidden="true">
+        <!-- <div class="invite-petals" aria-hidden="true">
             <span class="invite-hero__petal p1"></span>
             <span class="invite-hero__petal p2"></span>
             <span class="invite-hero__petal p3"></span>
             <span class="invite-hero__petal p4"></span>
             <span class="invite-hero__petal p5"></span>
             <span class="invite-hero__petal p6"></span>
-        </div>
+        </div> -->
         <section class="invite-hero" aria-label="Wedding invitation">
             <div class="invite-hero__card">
                 <div class="invite-hero__arch" aria-hidden="true"></div>
                 <div class="invite-hero__cream">
-                    <div class="invite-hero__monogram" aria-label="BT monogram">
+                    <!-- <div class="invite-hero__monogram" aria-label="BT monogram">
                         <span class="invite-hero__m-b">B</span>
                         <span class="invite-hero__m-t">T</span>
-                    </div>
-                    <p class="invite-hero__wedding">Wedding</p>
-                    <p class="invite-hero__celebration">Celebration</p>
+                    </div> -->
+                    <!-- <p class="invite-hero__wedding">Wedding</p>
+                    <p class="invite-hero__celebration">Celebration</p> -->
                 </div>
                 <div class="invite-hero__photo-wrap">
                     <img class="invite-hero__photo"
                         src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-7.jpg"
-                        alt="Thabiso and Boitumelo" width="600" height="800" />
+                        alt="Thabiso and Boitumelo" width="400" height="400" />
                 </div>
             </div>
         </section>
@@ -210,7 +209,6 @@
                             <p class="palette-subtitle">KINDLY REFER TO THE COLOURS BELOW AS A GUIDE</p>
 
                             <div class="palette-swatches" aria-label="Palette swatches">
-                                <span class="swatch swatch--white" aria-label="White"></span>
                                 <span class="swatch swatch--beige" aria-label="Beige"></span>
                                 <span class="swatch swatch--sky" aria-label="Sky Blue"></span>
                                 <span class="swatch swatch--teal" aria-label="Teal"></span>
@@ -283,9 +281,75 @@
                     <div class="promise-stage">
                         <div class="promise-arch" aria-hidden="true"></div>
 
-                        <div class="promise-photo" aria-label="Couple portrait">
-                            <img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-13.jpg"
-                                alt="Thabiso and Boitumelo" />
+                         <div class="promise-photo promise-carousel" aria-label="Couple portrait carousel">
+                            <button class="promise-carousel__btn promise-carousel__btn--prev" type="button"
+                                aria-label="Previous photo">&#10094;</button>
+
+                            <div class="promise-carousel__track">
+                                <img class="promise-carousel__slide is-active"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-1.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-2.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-3.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-4.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-5.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-6.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-7.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-8.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-9.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-10.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-11.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-12.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-13.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                                <img class="promise-carousel__slide"
+                                    src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/Photoshoot-14.jpg"
+                                    alt="Thabiso and Boitumelo" />
+                            </div>  
+
+                            <button class="promise-carousel__btn promise-carousel__btn--next" type="button"
+                                aria-label="Next photo">&#10095;</button>
+
+                            <div class="promise-carousel__dots" aria-label="Photo selector">
+                                <button class="promise-carousel__dot is-active" type="button"
+                                    aria-label="Show photo 1"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 2"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 3"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 4"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 5"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 6"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 7"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 8"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 9"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 10"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 11"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 12"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 13"></button>
+                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 14"></button>
+                            </div>
                         </div>
 
 
@@ -410,6 +474,78 @@
             countdownIntervalId = window.setInterval(tick, 1000);
         }
 
+        function initPromiseCarousel() {
+            const carousel = document.querySelector(".promise-carousel");
+            if (!carousel || carousel.dataset.initialized === "true") return;
+
+            const slides = Array.from(carousel.querySelectorAll(".promise-carousel__slide"));
+            const dots = Array.from(carousel.querySelectorAll(".promise-carousel__dot"));
+            const prevBtn = carousel.querySelector(".promise-carousel__btn--prev");
+            const nextBtn = carousel.querySelector(".promise-carousel__btn--next");
+            if (slides.length === 0) return;
+
+            let activeIndex = 0;
+            let autoplayId = null;
+            const AUTOPLAY_MS = 3500;
+
+            const showSlide = (index) => {
+                activeIndex = (index + slides.length) % slides.length;
+                slides.forEach((slide, slideIndex) => {
+                    slide.classList.toggle("is-active", slideIndex === activeIndex);
+                });
+                dots.forEach((dot, dotIndex) => {
+                    dot.classList.toggle("is-active", dotIndex === activeIndex);
+                });
+            };
+
+            const stopAutoplay = () => {
+                if (autoplayId !== null) {
+                    window.clearInterval(autoplayId);
+                    autoplayId = null;
+                }
+            };
+
+            const startAutoplay = () => {
+                stopAutoplay();
+                autoplayId = window.setInterval(() => {
+                    showSlide(activeIndex + 1);
+                }, AUTOPLAY_MS);
+            };
+
+            if (prevBtn) prevBtn.addEventListener("click", () => {
+                showSlide(activeIndex - 1);
+                startAutoplay();
+            });
+
+            if (nextBtn) nextBtn.addEventListener("click", () => {
+                showSlide(activeIndex + 1);
+                startAutoplay();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", () => {
+                    showSlide(index);
+                    startAutoplay();
+                });
+            });
+
+            carousel.addEventListener("mouseenter", stopAutoplay);
+            carousel.addEventListener("mouseleave", startAutoplay);
+            carousel.addEventListener("touchstart", stopAutoplay, { passive: true });
+            carousel.addEventListener("touchend", startAutoplay, { passive: true });
+            document.addEventListener("visibilitychange", () => {
+                if (document.hidden) {
+                    stopAutoplay();
+                } else {
+                    startAutoplay();
+                }
+            });
+
+            showSlide(0);
+            startAutoplay();
+            carousel.dataset.initialized = "true";
+        }
+
         function openInvitation() {
             if (isOpening) return;
             isOpening = true;
@@ -423,6 +559,7 @@
                 document.body.classList.add("invite-open");
                 startHeaderCountdown();
                 startWeddingCountdown();
+                initPromiseCarousel();
             }, 1000);
         }
 
@@ -431,6 +568,7 @@
             document.body.classList.add("invite-open");
             startHeaderCountdown();
             startWeddingCountdown();
+            initPromiseCarousel();
         }
 
         seal.addEventListener("click", (e) => {
@@ -438,35 +576,87 @@
             openInvitation();
         });
 
-        // Drag/swipe anywhere on the envelope to open
-        let startX = null;
+        envelope.addEventListener("click", () => {
+            openInvitation();
+        });
+
+        // Upward scroll/swipe should also open the curtain.
         let startY = null;
-        const DRAG_THRESHOLD_PX = 22;
+        let pointerStartY = null;
+        const UPWARD_THRESHOLD_PX = 24;
+
+        function handleUpwardDelta(deltaY) {
+            if (isOpening) return;
+            if (deltaY < -UPWARD_THRESHOLD_PX) {
+                openInvitation();
+            }
+        }
 
         envelope.addEventListener("pointerdown", (e) => {
             if (isOpening) return;
-            startX = e.clientX;
-            startY = e.clientY;
+            pointerStartY = e.clientY;
         });
 
         envelope.addEventListener("pointermove", (e) => {
-            if (isOpening || startX === null || startY === null) return;
-            const dx = e.clientX - startX;
-            const dy = e.clientY - startY;
-            if (Math.hypot(dx, dy) >= DRAG_THRESHOLD_PX) {
-                openInvitation();
-                startX = null;
-                startY = null;
-            }
+            if (isOpening || pointerStartY === null) return;
+            const dy = e.clientY - pointerStartY;
+            handleUpwardDelta(dy);
         });
 
         envelope.addEventListener("pointerup", () => {
-            startX = null;
-            startY = null;
+            pointerStartY = null;
         });
 
         envelope.addEventListener("pointercancel", () => {
-            startX = null;
+            pointerStartY = null;
+        });
+
+        envelope.addEventListener("touchstart", (e) => {
+            if (isOpening || e.touches.length === 0) return;
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        envelope.addEventListener("touchmove", (e) => {
+            if (isOpening || startY === null || e.touches.length === 0) return;
+            const dy = e.touches[0].clientY - startY;
+            if (dy < -UPWARD_THRESHOLD_PX) {
+                e.preventDefault();
+                openInvitation();
+                startY = null;
+            }
+        }, { passive: false });
+
+        envelope.addEventListener("touchend", () => {
+            startY = null;
+        }, { passive: true });
+
+        envelope.addEventListener("wheel", (e) => {
+            if (isOpening) return;
+            if (e.deltaY < -8) {
+                e.preventDefault();
+                openInvitation();
+            }
+        }, { passive: false });
+
+        window.addEventListener("wheel", (e) => {
+            if (isOpening || envelope.style.display === "none") return;
+            if (e.deltaY < -8) {
+                e.preventDefault();
+                openInvitation();
+            }
+        }, { passive: false });
+
+        window.addEventListener("touchmove", (e) => {
+            if (isOpening || envelope.style.display === "none" || startY === null || e.touches.length === 0) return;
+            const dy = e.touches[0].clientY - startY;
+            if (dy < -UPWARD_THRESHOLD_PX) {
+                e.preventDefault();
+                openInvitation();
+                startY = null;
+            }
+        }, { passive: false });
+
+        window.addEventListener("touchend", () => {
             startY = null;
         });
     </script>
