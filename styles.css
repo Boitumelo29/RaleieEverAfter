@@ -1411,7 +1411,7 @@ body.invite-open {
 .details-section {
  max-width: 720px;
  margin: 0 auto 0;
- padding: 0 12px 0;
+ padding: 0 18px 0;
  position: relative;
 }
 
@@ -1449,10 +1449,10 @@ body.invite-open {
  margin: 0 0 40px;
  text-align: center;
  font-family: "Montserrat", sans-serif;
- font-size: clamp(0.9rem, 2.1vw, 1.14rem);
- letter-spacing: 0.38em;
+ font-size: 0.62rem;
+ letter-spacing: 0.45em;
  text-transform: uppercase;
- color: rgba(27, 42, 65, 0.72);
+ color: rgba(27, 42, 65, 0.78);
  font-weight: 500;
 }
 
@@ -1484,16 +1484,16 @@ body.invite-open {
 .details-label {
  margin: 0;
  font-family: "Montserrat", sans-serif;
- font-size: 0.52rem;
- letter-spacing: 0.3em;
+ font-size: 0.58rem;
+ letter-spacing: 0.34em;
  text-transform: uppercase;
- color: rgba(27, 42, 65, 0.54);
+ color: rgba(27, 42, 65, 0.66);
 }
 
 .details-main {
  margin: 0;
  font-family: "Cormorant Garamond", "Georgia", serif;
- font-size: clamp(1.26rem, 3.2vw, 1.72rem);
+ font-size: clamp(1.28rem, 3.6vw, 1.85rem);
  letter-spacing: 0.02em;
  color: #1B2A41;
  line-height: 1.16;
@@ -1556,21 +1556,21 @@ body.invite-open {
 }
 
 .details-editorial .details-block:nth-child(1) .details-main:first-of-type {
- font-size: clamp(2.25rem, 6.2vw, 3.1rem);
+ font-size: clamp(1.28rem, 3.6vw, 1.85rem);
  letter-spacing: 0.12em;
  line-height: 1.02;
 }
 
 .details-editorial .details-block:nth-child(1) .details-label:first-of-type {
- font-size: 0.7rem;
- letter-spacing: 0.18em;
+ font-size: 0.58rem;
+ letter-spacing: 0.34em;
  color: rgba(27, 42, 65, 0.66);
 }
 
 .details-editorial .details-block:nth-child(1) .details-label:nth-of-type(2) {
- font-size: 0.56rem;
- letter-spacing: 0.2em;
- color: rgba(27, 42, 65, 0.52);
+ font-size: 0.58rem;
+ letter-spacing: 0.34em;
+ color: rgba(27, 42, 65, 0.66);
 }
 
 .details-editorial .details-block:nth-child(1) .details-main:last-of-type {
@@ -1583,7 +1583,7 @@ body.invite-open {
 }
 
 .details-editorial .details-block:nth-child(3) .details-main {
- font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+ font-size: clamp(1.28rem, 3.6vw, 1.85rem);
  color: rgba(27, 42, 65, 0.9);
 }
 
@@ -1815,7 +1815,7 @@ body.invite-open {
 
 @media (max-width: 640px) {
  .details-section {
- padding: 0 12px 0;
+ padding: 0 18px 0;
  margin-top: 0;
  }
 
@@ -1831,8 +1831,8 @@ body.invite-open {
 
  .details-title {
  margin-bottom: 30px;
- font-size: 0.8rem;
- letter-spacing: 0.28em;
+ font-size: 0.56rem;
+ letter-spacing: 0.32em;
  }
 
  .events-transition-divider {
@@ -1853,7 +1853,7 @@ body.invite-open {
  }
 
  .details-main {
- font-size: clamp(1.12rem, 5.4vw, 1.42rem);
+ font-size: clamp(1.28rem, 6.2vw, 1.85rem);
  }
 
  .details-label,
@@ -1871,7 +1871,7 @@ body.invite-open {
  }
 
  .details-editorial .details-block:nth-child(1) .details-main:first-of-type {
- font-size: clamp(1.85rem, 9vw, 2.45rem);
+ font-size: clamp(1.28rem, 6.2vw, 1.85rem);
  letter-spacing: 0.1em;
  }
 
@@ -1881,7 +1881,7 @@ body.invite-open {
  }
 
  .details-editorial .details-block:nth-child(3) .details-main {
- font-size: clamp(1.06rem, 4.9vw, 1.28rem);
+ font-size: clamp(1.28rem, 6.2vw, 1.85rem);
  }
 
  .events-section {
@@ -1955,7 +1955,7 @@ body.invite-open {
  position: relative;
  border-radius: 0;
  overflow: hidden;
- padding: 52px 28px 24px;
+ padding: 52px 28px 34px;
  background: #FFFFFF;
  box-shadow: none;
  text-align: center;
@@ -2114,7 +2114,7 @@ body.invite-open {
  display: grid;
  gap: 4px;
  justify-items: center;
- margin-top: -2px;
+ margin-top: 2px;
 }
 
 .registry-qrCard {
@@ -2140,7 +2140,8 @@ body.invite-open {
 }
 
 .registry-qrCaption {
- margin: 1px 0 0;
+ margin: 2px 0 0;
+ line-height: 1.35;
  font-family: "Montserrat", sans-serif;
  font-size: 0.56rem;
  letter-spacing: 0.12em;
@@ -2150,7 +2151,7 @@ body.invite-open {
 
 @media (max-width: 640px) {
  .verse-bg {
- padding: 44px 16px 24px;
+ padding: 44px 16px 30px;
  }
 
  .verse-photoFrame {
@@ -2407,11 +2408,11 @@ body.invite-open {
  }
 
  .promise-arch {
- inset: 0 4% 0 4%;
+ inset: 0 -1% 0 -1%;
  }
 
  .promise-photo {
- width: min(330px, 88vw);
+ width: min(320px, 100%);
  aspect-ratio: 0.74 / 1;
  }
 
@@ -2441,15 +2442,15 @@ body.invite-open {
 
 @media (max-width: 420px) {
  .promise-section {
- padding: 0 12px 52px;
+ padding: 0 18px 52px;
  }
 
  .promise-arch {
- inset: 0 2% 0 2%;
+ inset: 0 -2% 0 -2%;
  }
 
  .promise-photo {
- width: min(310px, 90vw);
+ width: min(300px, 100%);
  }
 
  .promise-stage {
