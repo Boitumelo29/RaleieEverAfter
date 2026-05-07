@@ -193,6 +193,7 @@
             <div class="events-bg">
                 <section class="events-editorial" aria-label="Order of events">
                     <div class="events-transition-divider" aria-hidden="true"></div>
+                    <div class="verse-transition-divider verse-transition-divider--top" aria-hidden="true"></div>
                     <header class="events-title-wrap" aria-label="The day heading">
                         <p class="events-title-script">the</p>
                         <p class="events-title-main">DAY</p>
@@ -358,7 +359,74 @@
                 <p class="verse-ref">Proverbs 18:22</p>
                 <div class="verse-transition-divider" aria-hidden="true"></div>
             </div>
+
+            <section class="music-experience" aria-label="Music experience">
+                <div class="music-experience__inner">
+                    <p class="music-experience__kicker">OUR SOUNDTRACK</p>
+                    <p class="music-experience__subtitle">A song for the beginning of forever</p>
+
+                    <div class="music-player" aria-label="Wedding soundtrack player">
+                        <audio class="music-player__audio" preload="metadata" loop
+                            src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3"></audio>
+
+                        <div class="music-player__timeline">
+                            <span class="music-player__time music-player__time--current">0:00</span>
+                            <button class="music-player__progress" type="button" aria-label="Seek audio position">
+                                <span class="music-player__progress-fill"></span>
+                                <span class="music-player__progress-thumb" aria-hidden="true"></span>
+                            </button>
+                            <span class="music-player__time music-player__time--total">0:00</span>
+                        </div>
+
+                        <div class="music-player__controls" aria-label="Playback controls">
+                            <button class="music-player__icon-btn music-player__repeat-btn" type="button"
+                                aria-label="Toggle repeat">
+                                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                    <path d="M16 7h3v3M8 17H5v-3M7 8c1.1-1.2 2.7-2 4.5-2H19M17 16c-1.1 1.2-2.7 2-4.5 2H5"
+                                        fill="none" />
+                                </svg>
+                            </button>
+
+                            <div class="music-player__main-controls">
+                                <button class="music-player__icon-btn music-player__skip-btn music-player__prev-btn"
+                                    type="button" aria-label="Previous">
+                                    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <path d="M6 6v12M18 7l-8 5 8 5z" fill="none" />
+                                    </svg>
+                                </button>
+
+                                <button class="music-player__play-btn" type="button" aria-label="Play soundtrack">
+                                    <svg class="music-player__play-icon" viewBox="0 0 24 24" focusable="false"
+                                        aria-hidden="true">
+                                        <path d="M9 7.2v9.6L17 12z" />
+                                    </svg>
+                                    <svg class="music-player__pause-icon" viewBox="0 0 24 24" focusable="false"
+                                        aria-hidden="true">
+                                        <path d="M9 7h2.8v10H9zm4.2 0H16v10h-2.8z" />
+                                    </svg>
+                                </button>
+
+                                <button class="music-player__icon-btn music-player__skip-btn music-player__next-btn"
+                                    type="button" aria-label="Next">
+                                    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                        <path d="M18 6v12M6 7l8 5-8 5z" fill="none" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <button class="music-player__icon-btn music-player__favourite-btn" type="button"
+                                aria-label="Save as favourite">
+                                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                    <path d="M12 20.2 5.8 14a4.4 4.4 0 0 1 0-6.2 4.4 4.4 0 0 1 6.2 0l.1.1.1-.1a4.4 4.4 0 0 1 6.2 0 4.4 4.4 0 0 1 0 6.2z"
+                                        fill="none" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
+        
 
         <div class="section-divider" aria-hidden="true"></div>
 
@@ -668,6 +736,156 @@
             revealEls.forEach((el) => observer.observe(el));
         }
 
+        function initMusicExperience() {
+            const players = Array.from(document.querySelectorAll(".music-player"));
+            if (players.length === 0) return;
+
+            const formatTime = (secs) => {
+                if (!Number.isFinite(secs) || secs < 0) return "0:00";
+                const totalSeconds = Math.floor(secs);
+                const minutes = Math.floor(totalSeconds / 60);
+                const seconds = totalSeconds % 60;
+                return `${minutes}:${String(seconds).padStart(2, "0")}`;
+            };
+
+            players.forEach((player) => {
+                if (player.dataset.initialized === "true") return;
+
+                const audio = player.querySelector(".music-player__audio");
+                const progressBtn = player.querySelector(".music-player__progress");
+                const progressFill = player.querySelector(".music-player__progress-fill");
+                const progressThumb = player.querySelector(".music-player__progress-thumb");
+                const currentTimeEl = player.querySelector(".music-player__time--current");
+                const totalTimeEl = player.querySelector(".music-player__time--total");
+                const playBtn = player.querySelector(".music-player__play-btn");
+                const prevBtn = player.querySelector(".music-player__prev-btn");
+                const nextBtn = player.querySelector(".music-player__next-btn");
+                const repeatBtn = player.querySelector(".music-player__repeat-btn");
+                const favouriteBtn = player.querySelector(".music-player__favourite-btn");
+                if (!audio || !progressBtn || !progressFill || !progressThumb || !currentTimeEl || !totalTimeEl || !playBtn) {
+                    return;
+                }
+
+                let rafId = null;
+
+                const updateVisualState = () => {
+                    const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+                    const current = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+                    const ratio = duration > 0 ? Math.min(1, Math.max(0, current / duration)) : 0;
+                    const percent = `${ratio * 100}%`;
+
+                    progressFill.style.width = percent;
+                    progressThumb.style.left = percent;
+                    currentTimeEl.textContent = formatTime(current);
+                    totalTimeEl.textContent = formatTime(duration);
+                    playBtn.classList.toggle("is-playing", !audio.paused && !audio.ended);
+                    playBtn.setAttribute("aria-label", audio.paused || audio.ended ? "Play soundtrack" : "Pause soundtrack");
+                };
+
+                const stopRaf = () => {
+                    if (rafId !== null) {
+                        window.cancelAnimationFrame(rafId);
+                        rafId = null;
+                    }
+                };
+
+                const startRaf = () => {
+                    stopRaf();
+                    const tick = () => {
+                        updateVisualState();
+                        if (!audio.paused && !audio.ended) {
+                            rafId = window.requestAnimationFrame(tick);
+                        }
+                    };
+                    rafId = window.requestAnimationFrame(tick);
+                };
+
+                const seekToClientX = (clientX) => {
+                    const rect = progressBtn.getBoundingClientRect();
+                    if (rect.width <= 0 || !Number.isFinite(audio.duration)) return;
+                    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+                    audio.currentTime = ratio * audio.duration;
+                    updateVisualState();
+                };
+
+                playBtn.addEventListener("click", async () => {
+                    try {
+                        if (audio.paused || audio.ended) {
+                            await audio.play();
+                            startRaf();
+                        } else {
+                            audio.pause();
+                            stopRaf();
+                        }
+                        updateVisualState();
+                    } catch (err) {
+                        console.warn("Audio playback failed:", err);
+                    }
+                });
+
+                prevBtn?.addEventListener("click", () => {
+                    audio.currentTime = Math.max(0, audio.currentTime - 10);
+                    updateVisualState();
+                });
+
+                nextBtn?.addEventListener("click", () => {
+                    if (!Number.isFinite(audio.duration)) return;
+                    audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
+                    updateVisualState();
+                });
+
+                repeatBtn?.addEventListener("click", () => {
+                    audio.loop = !audio.loop;
+                    repeatBtn.classList.toggle("is-active", audio.loop);
+                });
+
+                favouriteBtn?.addEventListener("click", () => {
+                    favouriteBtn.classList.toggle("is-active");
+                });
+
+                progressBtn.addEventListener("click", (e) => {
+                    seekToClientX(e.clientX);
+                });
+
+                progressBtn.addEventListener("keydown", (e) => {
+                    if (e.key === "ArrowRight") {
+                        e.preventDefault();
+                        audio.currentTime = Math.min((audio.duration || 0), audio.currentTime + 5);
+                        updateVisualState();
+                    } else if (e.key === "ArrowLeft") {
+                        e.preventDefault();
+                        audio.currentTime = Math.max(0, audio.currentTime - 5);
+                        updateVisualState();
+                    } else if (e.key === "Home") {
+                        e.preventDefault();
+                        audio.currentTime = 0;
+                        updateVisualState();
+                    } else if (e.key === "End" && Number.isFinite(audio.duration)) {
+                        e.preventDefault();
+                        audio.currentTime = audio.duration;
+                        updateVisualState();
+                    }
+                });
+
+                audio.addEventListener("loadedmetadata", updateVisualState);
+                audio.addEventListener("durationchange", updateVisualState);
+                audio.addEventListener("timeupdate", updateVisualState);
+                audio.addEventListener("pause", () => {
+                    stopRaf();
+                    updateVisualState();
+                });
+                audio.addEventListener("play", startRaf);
+                audio.addEventListener("ended", () => {
+                    stopRaf();
+                    updateVisualState();
+                });
+
+                repeatBtn?.classList.toggle("is-active", audio.loop);
+                updateVisualState();
+                player.dataset.initialized = "true";
+            });
+        }
+
         function openInvitation() {
             if (isOpening) return;
             isOpening = true;
@@ -680,6 +898,7 @@
             startWeddingCountdown();
             initPromiseCarousel();
             initDetailsReveal();
+            initMusicExperience();
 
             window.setTimeout(() => {
                 envelope.style.display = "none";
@@ -693,6 +912,7 @@
             startWeddingCountdown();
             initPromiseCarousel();
             initDetailsReveal();
+            initMusicExperience();
         }
 
         seal.addEventListener("click", (e) => {
