@@ -1821,7 +1821,7 @@ row-gap: 0;
 .events-time {
  margin: 0;
  font-family: "Montserrat", sans-serif;
- font-size: 0.52rem;
+ font-size: 0.58rem;
  letter-spacing: 0.22em;
  text-transform: uppercase;
  color: rgba(27, 42, 65, 0.43);
@@ -1830,7 +1830,7 @@ row-gap: 0;
 .events-event {
  margin: 0;
  font-family: "Cormorant Garamond", "Georgia", serif;
- font-size: clamp(1.08rem, 2.95vw, 1.38rem);
+ font-size: clamp(1.22rem, 3.2vw, 1.56rem);
  letter-spacing: 0.02em;
  font-weight: 500;
  color: #1B2A41;
@@ -2034,12 +2034,12 @@ margin-top: 10px;
  }
 
  .events-event {
- font-size: clamp(1rem, 4.9vw, 1.18rem);
+ font-size: clamp(1.08rem, 5.2vw, 1.28rem);
  line-height: 1.22;
  }
 
  .events-time {
- font-size: 0.45rem;
+ font-size: 0.5rem;
  letter-spacing: 0.18em;
  color: rgba(27, 42, 65, 0.4);
  }
