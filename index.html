@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
 
@@ -135,51 +135,56 @@
         <section class="details-section" aria-label="Event details panel">
             <div class="details-bg">
                 <div class="details-card details-card--reveal">
-                    <p class="details-title">The Details</p>
+                    <header class="details-title-wrap" aria-label="The details heading">
+                        <p class="details-title-script">the</p>
+                        <p class="details-title-main">DETAILS</p>
+                    </header>
 
                     <div class="details-editorial">
-
-                        <div class="details-block">
-                            <p class="details-label">26</p>
-                            <p class="details-main">SEPTEMBER</p>
-                            <p class="details-label">2026</p>
-                            <p class="details-main">Saturday</p>
-                        </div>
-
-
-                        <div class="details-block">
-                            <p class="details-label">Time</p>
-                            <p class="details-main">12:00 PM Midday</p>
-                        </div>
-
-                        <div class="details-block">
-                            <p class="details-label">Location</p>
-                            <p class="details-main">Boksburg, Johannesburg</p>
-                        </div>
-
-                        <div class="details-block">
-                            <p class="details-label">Contact Number</p>
-                            <p class="details-main">+27 00 000 0000</p>
-                        </div>
-                    </div>
-                    <section class="palette-section" aria-label="Colour palette">
-                        <div class="palette-card">
-                            <p class="palette-title">COLOUR PALETTE:</p>
-                            <p class="palette-subtitle">
-                                KINDLY REFER TO THE COLOURS BELOW AS A GUIDE
+                        <article class="details-block">
+                            <p class="details-label">Date</p>
+                            <div class="details-divider" aria-hidden="true"></div>
+                            <p class="details-main editorial-countdown__date">
+                                <span class="editorial-countdown__day">26</span>
+                                <span class="editorial-countdown__month">SEPTEMBER</span>
+                                <span class="editorial-countdown__year">2026</span>
                             </p>
+                        </article>
 
-                            <div class="palette-swatches" aria-label="Palette swatches">
-                                <span class="swatch swatch--sky"></span>
-                                <span class="swatch swatch--teal"></span>
-                                <span class="swatch swatch--navy"></span>
-                                <span class="swatch-break" aria-hidden="true"></span>
-                                <span class="swatch swatch--beige"></span>
-                                <span class="swatch swatch--mustard"></span>
-                                <span class="swatch swatch--orange"></span>
-                            </div>
-                        </div>
-                    </section>
+                        <article class="details-block">
+                            <p class="details-label">Venue</p>
+                            <div class="details-divider" aria-hidden="true"></div>
+                            <p class="details-main">Boksburg, Johannesburg</p>
+                            <a class="details-link" href="#" aria-label="View directions to venue">View directions</a>
+                        </article>
+
+                        <article class="details-block">
+                            <p class="details-label">Contact</p>
+                            <div class="details-divider" aria-hidden="true"></div>
+                            <p class="details-main">+27 00 000 0000</p>
+                        </article>
+
+                        <article class="details-block">
+                            <p class="details-label">Dress Code</p>
+                            <div class="details-divider" aria-hidden="true"></div>
+                            <p class="details-main">Semi-formal attire</p>
+                            <p class="details-note">Elegant tones encouraged</p>
+                            <section class="palette-section" aria-label="Colour palette">
+                                <div class="palette-card">
+                                    <p class="palette-title">Colour palette</p>
+                                    <div class="palette-swatches" aria-label="Palette swatches">
+                                        <span class="swatch swatch--sky"></span>
+                                        <span class="swatch swatch--teal"></span>
+                                        <span class="swatch swatch--navy"></span>
+                                        <span class="swatch-break" aria-hidden="true"></span>
+                                        <span class="swatch swatch--beige"></span>
+                                        <span class="swatch swatch--mustard"></span>
+                                        <span class="swatch swatch--orange"></span>
+                                    </div>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
