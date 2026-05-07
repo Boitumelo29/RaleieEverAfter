@@ -795,24 +795,11 @@ body.invite-open {
 }
 
 .invite-section__card::before {
- content: "";
- position: absolute;
- top: -20px;
- left: 0;
- right: 0;
- height: 22px;
- background: rgba(255, 255, 255, 0.92);
- border-left: 1px solid rgba(27, 42, 65, 0.12);
- border-right: 1px solid rgba(27, 42, 65, 0.12);
+ content: none;
 }
 
 .invite-section__card::after {
- content: "";
- position: absolute;
- inset: 0;
- pointer-events: none;
- background: radial-gradient(120% 85% at 50% 0%, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0));
- opacity: 0.7;
+ content: none;
 }
 
 .invite-section__header {
@@ -2081,7 +2068,17 @@ margin-top: 10px;
 }
 
 .verse-transition-divider {
- display: none;
+ width: min(78%, 520px);
+ height: 1px;
+ margin: 24px auto 0;
+ background: linear-gradient(to right, rgba(184, 152, 95, 0), rgba(184, 152, 95, 0.3), rgba(184, 152, 95, 0));
+}
+
+.verse-transition-divider--top {
+ width: calc(100% + 56px);
+ max-width: none;
+ margin: 0 0 28px -28px;
+ background: rgba(27, 42, 65, 0.2);
 }
 
 .verse-photoFrame {
@@ -2332,6 +2329,12 @@ margin-top: 10px;
  .verse-transition-divider {
  width: min(82%, 360px);
  margin: 0 auto 14px;
+ }
+
+ .verse-transition-divider--top {
+ width: calc(100% + 32px);
+ max-width: none;
+ margin: 0 0 24px -16px;
  }
 
  .registry-links {
