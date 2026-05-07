@@ -2092,7 +2092,7 @@ margin-top: 10px;
 
 .verse-photoFrame {
  width: min(78%, 300px);
- margin: 0 auto 30px;
+ margin: 28px auto 30px;
  border-radius: 200px 200px 28px 28px;
  padding: 10px;
  background:
@@ -2318,7 +2318,7 @@ margin-top: 10px;
 
  .verse-photoFrame {
  width: min(82%, 260px);
- margin-bottom: 24px;
+ margin: 20px auto 24px;
  }
 
  .verse-divider {
