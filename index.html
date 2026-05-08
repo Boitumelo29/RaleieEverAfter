@@ -134,7 +134,7 @@
 
         <section class="details-section" aria-label="Event details panel">
             <div class="details-bg">
-                <div class="details-card details-card--reveal">
+                <div class="details-card">
                     <header class="details-title-wrap" aria-label="The details heading">
                         <p class="details-title-script">the</p>
                         <p class="details-title-main">DETAILS</p>
@@ -336,21 +336,6 @@
                     </div>
                 </div>
 
-                <div class="verse-photoFrame" aria-label="Couple photo frame">
-                    <div class="verse-photoFrame__inner">
-                        <img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-4.jpg"
-                            alt="Thabiso and Boitumelo" />
-                    </div>
-                </div>
-
-                <p class="verse-quote">
-                    “He who finds a <strong>wife</strong>, finds a <strong>good thing</strong> and obtains favour
-                    from the Lord”
-                </p>
-                <p class="verse-ref">Proverbs 18:22</p>
-                <div class="verse-transition-divider" aria-hidden="true"></div>
-            </div>
-
             <section class="music-experience" aria-label="Music experience">
                 <div class="music-experience__inner">
                     <p class="music-experience__kicker">OUR SOUNDTRACK</p>
@@ -416,6 +401,21 @@
                     </div>
                 </div>
             </section>
+
+                <div class="verse-photoFrame" aria-label="Couple photo frame">
+                    <div class="verse-photoFrame__inner">
+                        <img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-5.jpg"
+                            alt="Thabiso and Boitumelo" />
+                    </div>
+                </div>
+
+                <p class="verse-quote">
+                    Above all, <strong>love</strong> each other deeply, because <strong>love</strong> covers over a multitude of sin.
+                </p>
+                <p class="verse-ref">1 Peter 4:8</p>
+                <div class="verse-transition-divider" aria-hidden="true"></div>
+            </div>
+
         </section>
         
 
@@ -711,26 +711,6 @@
             carousel.dataset.initialized = "true";
         }
 
-        function initDetailsReveal() {
-            const revealEls = Array.from(document.querySelectorAll(".details-card--reveal"));
-            if (revealEls.length === 0) return;
-
-            if (!("IntersectionObserver" in window)) {
-                revealEls.forEach((el) => el.classList.add("is-visible"));
-                return;
-            }
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) return;
-                    entry.target.classList.add("is-visible");
-                    observer.unobserve(entry.target);
-                });
-            }, { threshold: 0.25 });
-
-            revealEls.forEach((el) => observer.observe(el));
-        }
-
         function initMusicExperience() {
             const players = Array.from(document.querySelectorAll(".music-player"));
             if (players.length === 0) return;
@@ -892,7 +872,6 @@
             startHeaderCountdown();
             startWeddingCountdown();
             initPromiseCarousel();
-            initDetailsReveal();
             initMusicExperience();
 
             window.setTimeout(() => {
@@ -906,7 +885,6 @@
             startHeaderCountdown();
             startWeddingCountdown();
             initPromiseCarousel();
-            initDetailsReveal();
             initMusicExperience();
         }
 

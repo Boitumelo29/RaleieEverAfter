@@ -69,7 +69,7 @@ body.invite-open {
  font-size: 0.62rem;
  letter-spacing: 0.45em;
  text-transform: uppercase;
- color: rgba(244, 248, 255, 0.82);
+ color: rgba(247, 232, 191, 0.9);
 }
 
 .opening-intro__monogram {
@@ -85,7 +85,7 @@ body.invite-open {
  font-family: "Cormorant Garamond", "Georgia", serif;
  font-size: clamp(5.3rem, 16vw, 8.9rem);
  line-height: 1;
- color: rgba(255, 252, 246, 0.92);
+ color: rgba(247, 232, 191, 0.9);
  text-shadow: 0 12px 24px rgba(8, 18, 44, 0.28);
 }
 
@@ -120,7 +120,7 @@ body.invite-open {
 
 .opening-control__line {
  height: 1px;
- background: linear-gradient(to right, rgba(245, 251, 255, 0), rgba(245, 251, 255, 0.5), rgba(245, 251, 255, 0));
+ background: linear-gradient(to right, rgba(245, 251, 255, 0), rgba(247, 232, 191, 0.9), rgba(245, 251, 255, 0));
 }
 
 .tap-me {
@@ -129,7 +129,7 @@ body.invite-open {
  font-size: 0.62rem;
  letter-spacing: 0.32em;
  text-transform: uppercase;
- color: rgba(245, 250, 255, 0.78);
+ color: rgba(247, 232, 191, 0.9);
  opacity: 0;
  pointer-events: none;
 }
@@ -275,7 +275,7 @@ body.invite-open {
  height: 42px;
  border-radius: 999px;
  border: 1px solid rgba(245, 250, 255, 0.75);
- background: radial-gradient(circle at 30% 30%, rgba(246, 251, 255, 0.58), rgba(228, 238, 255, 0.16));
+ background: radial-gradient(circle at 30% 30%, rgba(247, 232, 191, 0.9), rgba(228, 238, 255, 0.16));
  backdrop-filter: blur(4px);
  z-index: 8;
  box-shadow: 0 5px 18px rgba(7, 18, 44, 0.32);
@@ -572,7 +572,7 @@ body.invite-open {
 
 .invite-hero__monogram {
  font-family: "Georgia", "Times New Roman", serif;
- color: #1B2A41;
+ color: var(--accent-gold);
  width: 3.9rem;
  height: 4.2rem;
  position: relative;
@@ -1569,36 +1569,6 @@ color: var(--accent-gold-deep);
 border-color: var(--accent-gold);
 }
 
-.details-card--reveal {
- opacity: 0;
- transform: translateY(18px);
- transition: opacity 820ms ease, transform 820ms ease;
-}
-
-.details-card--reveal .details-title-wrap,
-.details-card--reveal .details-block {
- opacity: 0;
- transform: translateY(12px);
- transition: opacity 760ms ease, transform 760ms ease;
-}
-
-.details-card--reveal.is-visible {
- opacity: 1;
- transform: translateY(0);
-}
-
-.details-card--reveal.is-visible .details-title-wrap,
-.details-card--reveal.is-visible .details-block {
- opacity: 1;
- transform: translateY(0);
-}
-
-.details-card--reveal.is-visible .details-title-wrap { transition-delay: 70ms; }
-.details-card--reveal.is-visible .details-block:nth-child(1) { transition-delay: 140ms; }
-.details-card--reveal.is-visible .details-block:nth-child(2) { transition-delay: 210ms; }
-.details-card--reveal.is-visible .details-block:nth-child(3) { transition-delay: 280ms; }
-.details-card--reveal.is-visible .details-block:nth-child(4) { transition-delay: 350ms; }
-
 .events-section {
  max-width: 760px;
  margin: 0 auto;
@@ -1823,29 +1793,6 @@ row-gap: 0;
  color: #1B2A41;
  line-height: 1.24;
 }
-
-.details-card--reveal .events-title-wrap,
-.details-card--reveal .events-item {
- opacity: 0;
- transform: translateY(12px);
- transition: opacity 780ms ease, transform 780ms ease;
-}
-
-.details-card--reveal.is-visible .events-title-wrap,
-.details-card--reveal.is-visible .events-item {
- opacity: 1;
- transform: translateY(0);
-}
-
-.details-card--reveal.is-visible .events-title-wrap { transition-delay: 90ms; }
-.details-card--reveal.is-visible .events-item:nth-child(1) { transition-delay: 180ms; }
-.details-card--reveal.is-visible .events-item:nth-child(2) { transition-delay: 230ms; }
-.details-card--reveal.is-visible .events-item:nth-child(3) { transition-delay: 280ms; }
-.details-card--reveal.is-visible .events-item:nth-child(4) { transition-delay: 330ms; }
-.details-card--reveal.is-visible .events-item:nth-child(5) { transition-delay: 380ms; }
-.details-card--reveal.is-visible .events-item:nth-child(6) { transition-delay: 430ms; }
-.details-card--reveal.is-visible .events-item:nth-child(7) { transition-delay: 480ms; }
-.details-card--reveal.is-visible .events-item:nth-child(8) { transition-delay: 530ms; }
 
 @media (max-width: 640px) {
  .details-section {
@@ -2082,7 +2029,7 @@ margin-top: 10px;
 }
 
 .verse-photoFrame {
- width: min(78%, 300px);
+ width: min(90%, 380px);
  margin: 28px auto 30px;
  border-radius: 200px 200px 28px 28px;
  padding: 10px;
@@ -2308,7 +2255,7 @@ margin-top: 10px;
  }
 
  .verse-photoFrame {
- width: min(82%, 260px);
+ width: min(86%, 274px);
  margin: 20px auto 24px;
  }
 
