@@ -169,17 +169,16 @@
                         <article class="details-block">
                             <p class="details-label">Colour palette</p>
                             <div class="details-divider" aria-hidden="true"></div>
-                            <p class="details-main">Shades of blue with a touch of gold</p>
+                            <p class="details-main">Shades of Blue</p>
                             <section class="palette-section" aria-label="Colour palette">
                                 <div class="palette-card">
                                     <div class="palette-swatches" aria-label="Palette swatches">
-                                        <span class="swatch swatch--navy"></span>
-                                        <span class="swatch swatch--teal"></span>
-                                        <span class="swatch swatch--sky"></span>
-                                        <span class="swatch-break" aria-hidden="true"></span>
-                                        <span class="swatch swatch--beige"></span>
-                                        <span class="swatch swatch--mustard"></span>
-                                        <span class="swatch swatch--orange"></span>
+                                        <span class="swatch swatch--blue1"></span>
+                                        <span class="swatch swatch--blue2"></span>
+                                        <span class="swatch swatch--blue3"></span>
+                                        <span class="swatch swatch--blue4"></span>
+                                        <span class="swatch swatch--blue5"></span>
+                                        <span class="swatch swatch--blue6"></span>
                                     </div>
                                 </div>
                             </section>
@@ -339,11 +338,11 @@
             <section class="music-experience" aria-label="Music experience">
                 <div class="music-experience__inner">
                     <p class="music-experience__kicker">OUR SOUNDTRACK</p>
-                    <p class="music-experience__subtitle">A song for the beginning of forever</p>
+                    <p class="music-experience__subtitle">Dream About You</p>
 
                     <div class="music-player" aria-label="Wedding soundtrack player">
-                        <audio class="music-player__audio" preload="metadata" loop
-                            src="https://assets.mixkit.co/music/preview/mixkit-serene-view-443.mp3"></audio>
+                        <audio class="music-player__audio" preload="metadata"
+                            src="music/lloyiso-dream-about-you-official-audio-opjgbspr7ig_rWKFsJY0.mp3"></audio>
 
                         <div class="music-player__timeline">
                             <span class="music-player__time music-player__time--current">0:00</span>
@@ -355,13 +354,13 @@
                         </div>
 
                         <div class="music-player__controls" aria-label="Playback controls">
-                            <button class="music-player__icon-btn music-player__repeat-btn" type="button"
+                            <!-- <button class="music-player__icon-btn music-player__repeat-btn" type="button"
                                 aria-label="Toggle repeat">
                                 <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
                                     <path d="M16 7h3v3M8 17H5v-3M7 8c1.1-1.2 2.7-2 4.5-2H19M17 16c-1.1 1.2-2.7 2-4.5 2H5"
                                         fill="none" />
                                 </svg>
-                            </button>
+                            </button> -->
 
                             <div class="music-player__main-controls">
                                 <button class="music-player__icon-btn music-player__skip-btn music-player__prev-btn"
@@ -390,13 +389,13 @@
                                 </button>
                             </div>
 
-                            <button class="music-player__icon-btn music-player__favourite-btn" type="button"
+                            <!-- <button class="music-player__icon-btn music-player__favourite-btn" type="button"
                                 aria-label="Save as favourite">
                                 <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
                                     <path d="M12 20.2 5.8 14a4.4 4.4 0 0 1 0-6.2 4.4 4.4 0 0 1 6.2 0l.1.1.1-.1a4.4 4.4 0 0 1 6.2 0 4.4 4.4 0 0 1 0 6.2z"
                                         fill="none" />
                                 </svg>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -741,7 +740,63 @@
                     return;
                 }
 
+                const songTitleEl = player.closest(".music-experience__inner")?.querySelector(".music-experience__subtitle");
+                const tracks = [
+                    { title: "Ncono Sishade", src: "music/jayjayy-dj-tshegu-quinton-deep-ncono-sishade-official-audio-4gwgcp7zhoa_YidgZXov.mp3" },
+                    { title: "Kgomo Wedding Song", src: "music/jonas-gwangwa-kgomo-wedding-song-official-audio-stqesxbiexu_GzcyCuUs.mp3" },
+                    { title: "Ke Lorile", src: "music/pleasure-tsa-manyalo-ke-lorile-official-music-video-saufdtirsmo_LfdANYLf.mp3" },
+                    { title: "Hey Wena", src: "music/samthing-soweto-entity-musiq-ft-alie-keys-hey-wena-lyrics-oj7z8fkah2c_K7XU0cRV.mp3" },
+                    { title: "Yeshua (Jesus Image)", src: "music/yeshua-jesus-image-michael-koulianos-ivub1k0b0ze_rjnmumES.mp3" },
+                    { title: "Dream About You", src: "music/lloyiso-dream-about-you-official-audio-opjgbspr7ig_rWKFsJY0.mp3" }
+                ];
+                if (tracks.length === 0) return;
+
+                audio.loop = false;
+                let currentTrackIndex = 0;
+                const initialSrc = audio.getAttribute("src") || "";
+                const detectedTrackIndex = tracks.findIndex((track) => initialSrc.includes(track.src));
+                if (detectedTrackIndex >= 0) {
+                    currentTrackIndex = detectedTrackIndex;
+                } else {
+                    audio.setAttribute("src", tracks[currentTrackIndex].src);
+                }
+                if (songTitleEl) {
+                    songTitleEl.textContent = tracks[currentTrackIndex].title;
+                }
+
                 let rafId = null;
+
+                const pickRandomNextTrackIndex = () => {
+                    if (tracks.length <= 1) return currentTrackIndex;
+                    let nextIndex = currentTrackIndex;
+                    while (nextIndex === currentTrackIndex) {
+                        nextIndex = Math.floor(Math.random() * tracks.length);
+                    }
+                    return nextIndex;
+                };
+
+                const playTrackByIndex = async (trackIndex, forcePlay = false) => {
+                    if (trackIndex < 0 || trackIndex >= tracks.length) return;
+                    const shouldPlay = forcePlay || !audio.paused || audio.ended;
+
+                    currentTrackIndex = trackIndex;
+                    audio.setAttribute("src", tracks[currentTrackIndex].src);
+                    if (songTitleEl) {
+                        songTitleEl.textContent = tracks[currentTrackIndex].title;
+                    }
+                    audio.currentTime = 0;
+                    audio.load();
+                    updateVisualState();
+
+                    if (shouldPlay) {
+                        try {
+                            await audio.play();
+                            startRaf();
+                        } catch (err) {
+                            console.warn("Audio playback failed:", err);
+                        }
+                    }
+                };
 
                 const updateVisualState = () => {
                     const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
@@ -803,10 +858,9 @@
                     updateVisualState();
                 });
 
-                nextBtn?.addEventListener("click", () => {
-                    if (!Number.isFinite(audio.duration)) return;
-                    audio.currentTime = Math.min(audio.duration, audio.currentTime + 10);
-                    updateVisualState();
+                nextBtn?.addEventListener("click", async () => {
+                    const nextTrackIndex = pickRandomNextTrackIndex();
+                    await playTrackByIndex(nextTrackIndex, true);
                 });
 
                 repeatBtn?.addEventListener("click", () => {
@@ -852,6 +906,11 @@
                 audio.addEventListener("play", startRaf);
                 audio.addEventListener("ended", () => {
                     stopRaf();
+                    if (!audio.loop && tracks.length > 1) {
+                        const nextTrackIndex = pickRandomNextTrackIndex();
+                        void playTrackByIndex(nextTrackIndex, true);
+                        return;
+                    }
                     updateVisualState();
                 });
 
@@ -873,6 +932,13 @@
             startWeddingCountdown();
             initPromiseCarousel();
             initMusicExperience();
+            const openingTrackAudio = document.querySelector(".music-player__audio");
+            if (openingTrackAudio) {
+                openingTrackAudio.currentTime = 0;
+                openingTrackAudio.play().catch((err) => {
+                    console.warn("Opening soundtrack playback failed:", err);
+                });
+            }
 
             window.setTimeout(() => {
                 envelope.style.display = "none";

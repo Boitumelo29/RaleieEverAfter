@@ -1626,64 +1626,29 @@ margin-top: 14px;
  display: flex;
  justify-content: center;
  align-items: center;
-column-gap: 10px;
+column-gap: 0;
 row-gap: 0;
- flex-wrap: wrap;
+ flex-wrap: nowrap;
 }
 
 .swatch {
- width: 44px;
- height: 44px;
+ width: 56px;
+ height: 56px;
  border-radius: 999px;
  border: 1px solid rgba(27, 42, 65, 0.14);
  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.25);
 }
 
-.swatch-break {
- flex-basis: 100%;
- width: 0;
- height: 0;
- margin-bottom: -14px;
+.swatch + .swatch {
+ margin-left: -14px;
 }
 
-.swatch--beige { background: #EADBC8; }
-.swatch--sky { background: #8ECAE6; }
-.swatch--teal { background: #2A9D8F; }
-.swatch--navy { background: #1B2A41; }
-.swatch--mustard { background: #E9C46A; }
-.swatch--orange { background: #E76F51; }
-
-.swatch--beige,
-.swatch--mustard,
-.swatch--orange {
- width: 45px;
- height: 45px;
- position: relative;
- top: -1px;
- transform: translateY(-16px);
- z-index: 2;
-}
-
-.swatch--sky,
-.swatch--teal,
-.swatch--navy {
- position: relative;
- z-index: 1;
-}
-
-.swatch--teal,
-.swatch--sky {
- margin-left: -16px;
-}
-
-.swatch--beige {
- margin-left: 0;
-}
-
-.swatch--mustard,
-.swatch--orange {
- margin-left: -16px;
-}
+.swatch--blue1 { background: #EAF8FF; }
+.swatch--blue2 { background: #9FC3E4; }
+.swatch--blue3 { background: #86A6C6; }
+.swatch--blue4 { background: #355A83; }
+.swatch--blue5 { background: #49AAFF; }
+.swatch--blue6 { background: #5D86FF; }
 
 .events-title-wrap {
  position: relative;
@@ -1880,42 +1845,18 @@ margin-top: 20px;
  }
 
  .palette-swatches {
-column-gap: 10px;
+column-gap: 0;
 row-gap: 0;
 margin-top: 10px;
  }
 
  .swatch {
- width: 44px;
- height: 44px;
+ width: 48px;
+ height: 48px;
  }
 
- .swatch--beige,
- .swatch--mustard,
- .swatch--orange {
- width: 36px;
- height: 36px;
- top: -1px;
- transform: translateY(-14px);
- z-index: 2;
- }
-
- .swatch-break {
- margin-bottom: -12px;
- }
-
- .swatch--teal,
- .swatch--sky {
- margin-left: -16px;
- }
-
- .swatch--beige {
- margin-left: 0;
- }
-
- .swatch--mustard,
- .swatch--orange {
- margin-left: -14px;
+ .swatch + .swatch {
+ margin-left: -12px;
  }
 
  .events-title-wrap {
