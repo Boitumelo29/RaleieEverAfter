@@ -135,7 +135,7 @@ body.invite-open {
 }
 
 .opening-intro.show-tap .tap-me {
- animation: tap-me-fade 2s ease forwards;
+ animation: tap-me-fade 10s ease forwards;
 }
 
 @keyframes tap-me-fade {

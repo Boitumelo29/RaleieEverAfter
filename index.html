@@ -521,11 +521,15 @@
         let headerCountdownIntervalId = null;
         const CURTAIN_REVEAL_MS = 2300;
 
+        const hideIntroSec = 10_000;
+
+        openingIntro.classList.add('show-tap')
+
         // Show opening hint for 2 seconds.
-        if (openingIntro) {
-            openingIntro.classList.add("show-tap");
-            window.setTimeout(() => openingIntro.classList.remove("show-tap"), 2000);
-        }
+        // if (openingIntro) {
+        //     openingIntro.classList.add("show-tap");
+        //     window.setTimeout(() => openingIntro.classList.remove("show-tap"), hideIntroSec);
+        // }
 
         function startHeaderCountdown() {
             const container = document.querySelector(".invite-countdown");
