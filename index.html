@@ -2,1060 +2,1229 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedding Invitation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RaleieEverAfter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+href="https://fonts.googleapis.com/css2?family=Allura&family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap"
+rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
 
 </head>
 
 <body>
-    <!-- ENVELOPE -->
-    <div class="envelope" id="envelope">
-        <div class="curtain curtain--left" aria-hidden="true"></div>
-        <div class="curtain curtain--right" aria-hidden="true"></div>
-        <div class="curtain-sheen" aria-hidden="true"></div>
-        <div class="opening-intro" aria-label="Opening invitation">
-            <p class="opening-intro__kicker">The Wedding Of</p>
-            <div class="opening-intro__monogram" aria-label="Luxury monogram">
-                <span class="opening-intro__initial opening-intro__initial--left">T</span>
-                <span class="opening-intro__amp">&amp;</span>
-                <span class="opening-intro__initial opening-intro__initial--right">B</span>
-            </div>
-
-            <div class="opening-control" aria-hidden="true">
-                <span class="opening-control__line"></span>
-                <div class="seal" id="seal" role="button" tabindex="0" aria-label="Open invitation"></div>
-                <span class="opening-control__line"></span>
-            </div>
-
-            <p class="tap-me">Part The Curtains</p>
-        </div>
-    </div>
-
-    <!-- INVITE CONTENT -->
-    <div class="invite" id="invite">
-        <section class="invite-hero" aria-label="Wedding invitation">
-            <div class="invite-hero__card">
-                <div class="invite-hero__arch">
-                    <div class="invite-hero__photo-wrap">
-                        <img class="invite-hero__photo"
-                            src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-1.jpg"
-                            alt="Thabiso and Boitumelo" width="400" height="400" />
-                    </div>
-                </div>
-                <div class="invite-hero__cream">
-                    <div class="invite-hero__monogram" aria-label="B and T monogram">
-                        <img src="tumipreweddingphotoshoot-photo-download-1of1/bandt.png" alt="" />
-                    </div>
-                    <p class="invite-hero__wedding">Wedding</p>
-                    <p class="invite-hero__celebration">Celebration</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="invite-section invite-section--transparent" aria-label="Invitation details">
-            <div class="invite-section__card">
-                <!-- <div class="invite-watermark" aria-hidden="true">B &amp; T</div> -->
-                <header class="invite-section__header">
-                    <!-- <p class="invite-kicker">You are cordially invited to the wedding of</p> -->
-                    <p class="invite-union__subtitle">
-                        <span>You are cordially invited to</span>
-                        <span>the wedding of</span>
-                    </p>
-                     <div class="invite-union">
-                        <p class="invite-union__names">
-                            <span class="invite-union__name-line">Thabiso</span>
-                            <span class="invite-union__amp">&amp;</span>
-                            <span class="invite-union__name-line">Boitumelo</span>
-                        </p>
-                        <p class="invite-union__subtitle">
-                            <span>Celebrating love,</span>
-                            <span>laughter and forever</span>
-                        </p>
-                    </div>
-                
-                </header>
-
-                <section class="editorial-countdown invite-countdown" data-date="2026-09-26T13:00:00+02:00"
-                    aria-label="Wedding date and countdown">
-                    <div class="editorial-countdown__divider" aria-hidden="true"></div>
-                    <div class="editorial-countdown__inner">
-                        <p class="editorial-countdown__date">
-                            <span class="editorial-countdown__day">26</span>
-                            <span class="editorial-countdown__month">SEPTEMBER</span>
-                            <span class="editorial-countdown__year">2026</span>
-                        </p>
-                        <p class="editorial-countdown__heading">WEDDING COUNTDOWN</p>
-                        <div class="countdown editorial-countdown__timer" aria-label="Countdown timer">
-                            <div class="time-box">
-                                <span id="headerDays">00</span>
-                                <small>Days</small>
-                            </div>
-                            <span class="editorial-countdown__dot" aria-hidden="true"></span>
-                            <div class="time-box">
-                                <span id="headerHours">00</span>
-                                <small>Hours</small>
-                            </div>
-                            <span class="editorial-countdown__dot" aria-hidden="true"></span>
-                            <div class="time-box">
-                                <span id="headerMinutes">00</span>
-                                <small>Mins</small>
-                            </div>
-                            <span class="editorial-countdown__dot" aria-hidden="true"></span>
-                            <div class="time-box">
-                                <span id="headerSeconds">00</span>
-                                <small>Secs</small>
-                            </div>
-                        </div>
-                        <div class="message" id="headerMessage"></div>
-                    </div>
-                </section>
-
-                <div class="invite-section__main" aria-label="Invitation main content">
-            
-                    <div class="invite-strip" aria-hidden="true"></div>
-
-                    <div class="invite-photo" aria-label="Couple photo">
-                        <img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-11.jpg"
-                            alt="Thabiso and Boitumelo" />
-                        <div class="invite-photo__monogram" aria-hidden="true">
-                            <img src="tumipreweddingphotoshoot-photo-download-1of1/bandt.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-                  <div class="invite-strip invite-strip--after-main" aria-hidden="true"></div>
-            </div>
-        </section>
-
-        <section class="details-section" aria-label="Event details panel">
-            <div class="details-bg">
-                <div class="details-card">
-                    <header class="details-title-wrap" aria-label="The details heading">
-                        <p class="details-title-script">the</p>
-                        <p class="details-title-main">DETAILS</p>
-                    </header>
-
-                    <div class="details-editorial">
-                        <article class="details-block">
-                            <p class="details-label">Date</p>
-                            <div class="details-divider" aria-hidden="true"></div>
-                            <p class="details-main editorial-countdown__date">
-                                <span class="editorial-countdown__day">26</span>
-                                <span class="editorial-countdown__month">SEPTEMBER</span>
-                                <span class="editorial-countdown__year">2026</span>
-                            </p>
-                        </article>
-
-                        <article class="details-block">
-                            <p class="details-label">Venue</p>
-                            <div class="details-divider" aria-hidden="true"></div>
-                            <p class="details-main">Boksburg, Johannesburg</p>
-                            <a class="details-link" href="https://www.google.com/maps/search/?api=1&query=4+Ina+Road%2C+Dawn+Park"
-                                target="_blank" rel="noopener noreferrer"
-                                aria-label="View directions to 4 Ina Road, Dawn Park">View directions</a>
-                        </article>
-
-                        <article class="details-block">
-                            <p class="details-label">Contact</p>
-                            <div class="details-divider" aria-hidden="true"></div>
-                            <p class="details-main">+27 00 000 0000</p>
-                        </article>
-
-                        <article class="details-block">
-                            <p class="details-label">Colour palette</p>
-                            <div class="details-divider" aria-hidden="true"></div>
-                            <p class="details-main">Shades of Blue</p>
-                            <section class="palette-section" aria-label="Colour palette">
-                                <div class="palette-card">
-                                    <div class="palette-swatches" aria-label="Palette swatches">
-                                        <span class="swatch swatch--blue1"></span>
-                                        <span class="swatch swatch--blue2"></span>
-                                        <span class="swatch swatch--blue3"></span>
-                                        <span class="swatch swatch--blue4"></span>
-                                        <span class="swatch swatch--blue5"></span>
-                                        <span class="swatch swatch--blue6"></span>
-                                    </div>
-                                </div>
-                            </section>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="events-section" aria-label="Order of events">
-            <div class="events-bg">
-                <section class="events-editorial" aria-label="Order of events">
-                    <div class="events-transition-divider" aria-hidden="true"></div>
-                    <div class="verse-transition-divider verse-transition-divider--top" aria-hidden="true"></div>
-                    <header class="events-title-wrap" aria-label="The day heading">
-                        <p class="events-title-script">the</p>
-                        <p class="events-title-main">DAY</p>
-                    </header>
-
-                    
-                </section><div class="events-timeline">
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M7 20v-7m10 7v-7M5 10h14M8 10V6h8v4M6 20h12" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">12:00 PM</p>
-                                <h3 class="events-event">Guests Seating</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <circle cx="9" cy="12" r="4" />
-                                    <circle cx="15" cy="12" r="4" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">12:30 PM</p>
-                                <h3 class="events-event">Holy Matrimony</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M12 4v16M6.5 7.5l11 9M6.5 16.5l11-9" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">1:30 PM</p>
-                                <h3 class="events-event">Wedding Celebration</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M12 5v14M8 9h8M8 5h8M10 19h4" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">2:30 PM</p>
-                                <h3 class="events-event">Opening of Ceremonies</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M12 5v9M9 14h6M10 19h4M8 8.5a4 4 0 1 1 8 0v2.5H8z" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">3:00 PM</p>
-                                <h3 class="events-event">Speeches</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M7.5 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM4.5 20c.5-2.2 2.1-3.5 4-3.5s3.5 1.3 4 3.5m3-3.5c1.9 0 3.5 1.3 4 3.5" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">3:45 PM</p>
-                                <h3 class="events-event">Response from Groom &amp; Bride</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M8 5h8M9 5l1 8m4-8-1 8M10 13h4M11 13v6m2-6v6" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">4:15 PM</p>
-                                <h3 class="events-event">Toast</h3>
-                            </div>
-                        </article>
-
-                        <article class="events-item">
-                            <span class="events-icon" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" focusable="false">
-                                    <path d="M6.5 14.5 12 4l2.2 4.2L17.5 7l-2 4.8 2 1.7-4.2.3L12 18l-1.3-4.2-4.2-.3 2-1.7z" />
-                                </svg>
-                            </span>
-                            <div class="events-body">
-                                <p class="events-time">5:00 PM</p>
-                                <h3 class="events-event">Celebration Continues</h3>
-                            </div>
-                        </article>
-                    </div>
-            </div>
-        </section>
-
-        <section class="verse-section" aria-label="Spiritual message and registry">
-            <div class="verse-bg">
-                <!-- <div class="invite-strip" aria-hidden="true"></div> -->
-                <div class="verse-transition-divider verse-transition-divider--top" aria-hidden="true"></div>
-
-                <div class="verse-registry" aria-label="Registry options">
-                    <div class="registry-intro">
-                        <header class="registry-title-wrap" aria-label="The registry heading">
-                            <p class="registry-title-script">the</p>
-                            <p class="registry-title-main">REGISTRY</p>
-                        </header>
-                        <p class="registry-title">A Small Token of Love</p>
-                        <p class="registry-subtitle">
-                            Your presence is our greatest gift, but if you would like to bless us further, kindly
-                            explore our registry options below.
-                        </p>
-                    </div>
-
-                    <div class="registry-divider" aria-hidden="true"></div>
-
-                    <div class="registry-layout">
-                        <div class="registry-content">
-                            <p class="registry-text">
-                                Select your preferred option below.
-                            </p>
-
-                            <ul class="registry-links" aria-label="Registry stores">
-                                <li><a class="registry-link" href="https://www.mrphome.com/en_za/giftregistry/view/index/id/BTWEDD1857/" aria-label="Open Mr Price Home registry" target="_blank" rel="noopener noreferrer">Mr Price Home Registry</a></li>
-                                <li><a class="registry-link" href="https://carrolboyes.com/za/gift-registry/view/gift/2710/weddinggift.html" aria-label="Open Carrol Boyes registry" target="_blank" rel="noopener noreferrer">Carrol Boyes Registry</a></li>
-                                <li><a class="registry-link" href="https://m.yuppiechef.com/registry.htm?uuid=89181ba1-b003-4c05-a00e-5c52b640c6fd&action=view" aria-label="Open Yuppiechef registry" target="_blank" rel="noopener noreferrer">Yuppiechef Registry</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            <section class="music-experience" aria-label="Music experience">
-                <div class="music-experience__inner">
-                    <p class="music-experience__kicker">OUR SOUNDTRACK</p>
-                    <p class="music-experience__subtitle">Dream About You</p>
-
-                    <div class="music-player" aria-label="Wedding soundtrack player">
-                        <audio class="music-player__audio" preload="metadata"
-                            src="music/lloyiso-dream-about-you-official-audio-opjgbspr7ig_rWKFsJY0.mp3"></audio>
-
-                        <div class="music-player__timeline">
-                            <span class="music-player__time music-player__time--current">0:00</span>
-                            <button class="music-player__progress" type="button" aria-label="Seek audio position">
-                                <span class="music-player__progress-fill"></span>
-                                <span class="music-player__progress-thumb" aria-hidden="true"></span>
-                            </button>
-                            <span class="music-player__time music-player__time--total">0:00</span>
-                        </div>
-
-                        <div class="music-player__controls" aria-label="Playback controls">
-                            <!-- <button class="music-player__icon-btn music-player__repeat-btn" type="button"
-                                aria-label="Toggle repeat">
-                                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                                    <path d="M16 7h3v3M8 17H5v-3M7 8c1.1-1.2 2.7-2 4.5-2H19M17 16c-1.1 1.2-2.7 2-4.5 2H5"
-                                        fill="none" />
-                                </svg>
-                            </button> -->
-
-                            <div class="music-player__main-controls">
-                                <button class="music-player__icon-btn music-player__skip-btn music-player__prev-btn"
-                                    type="button" aria-label="Previous">
-                                    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                                        <path d="M6 6v12M18 7l-8 5 8 5z" fill="none" />
-                                    </svg>
-                                </button>
-
-                                <button class="music-player__play-btn" type="button" aria-label="Play soundtrack">
-                                    <svg class="music-player__play-icon" viewBox="0 0 24 24" focusable="false"
-                                        aria-hidden="true">
-                                        <path d="M9 7.2v9.6L17 12z" />
-                                    </svg>
-                                    <svg class="music-player__pause-icon" viewBox="0 0 24 24" focusable="false"
-                                        aria-hidden="true">
-                                        <path d="M9 7h2.8v10H9zm4.2 0H16v10h-2.8z" />
-                                    </svg>
-                                </button>
-
-                                <button class="music-player__icon-btn music-player__skip-btn music-player__next-btn"
-                                    type="button" aria-label="Next">
-                                    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                                        <path d="M18 6v12M6 7l8 5-8 5z" fill="none" />
-                                    </svg>
-                                </button>
-                            </div>
-
-                            <!-- <button class="music-player__icon-btn music-player__favourite-btn" type="button"
-                                aria-label="Save as favourite">
-                                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
-                                    <path d="M12 20.2 5.8 14a4.4 4.4 0 0 1 0-6.2 4.4 4.4 0 0 1 6.2 0l.1.1.1-.1a4.4 4.4 0 0 1 6.2 0 4.4 4.4 0 0 1 0 6.2z"
-                                        fill="none" />
-                                </svg>
-                            </button> -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-                <div class="verse-photoFrame" aria-label="Couple photo frame">
-                    <div class="verse-photoFrame__inner">
-                        <img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-5.jpg"
-                            alt="Thabiso and Boitumelo" />
-                    </div>
-                </div>
-
-                <p class="verse-quote">
-                    Above all, <strong>love</strong> each other deeply, because <strong>love</strong> covers over a multitude of sin.
-                </p>
-                <p class="verse-ref">1 Peter 4:8</p>
-                <div class="verse-transition-divider" aria-hidden="true"></div>
-                <p class="wedding-hashtag" aria-label="Wedding hashtag">#RaleieEverAfter</p>
-                <!-- <img class="wedding-hashtag-floral"
-                    src="tumipreweddingphotoshoot-photo-download-1of1/new-flowers.png"
-                    alt=""
-                    aria-hidden="true" /> -->
-            </div>
-
-        </section>
-        
-        <div class="section-divider" aria-hidden="true"></div>
-
-        <!-- <section class="promise-section" aria-label="Promise kept">
-            <div class="promise-phone">
-                <div class="promise-inner">
-
-
-                    <div class="promise-stage">
-                        <div class="promise-arch" aria-hidden="true"></div>
-
-                         <div class="promise-photo promise-carousel" aria-label="Couple portrait carousel">
-                            <button class="promise-carousel__btn promise-carousel__btn--prev" type="button"
-                                aria-label="Previous photo">&#10094;</button>
-
-                            <div class="promise-carousel__track">
-                                <div class="promise-carousel__arch-mask">
-                                    <img class="promise-carousel__slide is-active"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-1.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-2.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-3.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-4.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-5.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-6.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-7.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-8.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-9.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-10.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-11.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-12.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-13.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                    <img class="promise-carousel__slide"
-                                        src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-14.jpg"
-                                        alt="Thabiso and Boitumelo" />
-                                </div>
-                            </div>  
-
-                            <button class="promise-carousel__btn promise-carousel__btn--next" type="button"
-                                aria-label="Next photo">&#10095;</button>
-
-                            <div class="promise-carousel__dots" aria-label="Photo selector">
-                                <button class="promise-carousel__dot is-active" type="button"
-                                    aria-label="Show photo 1"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 2"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 3"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 4"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 5"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 6"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 7"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 8"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 9"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 10"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 11"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 12"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 13"></button>
-                                <button class="promise-carousel__dot" type="button" aria-label="Show photo 14"></button>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-            </div>
-        </section> -->
-    </div>
-
-    <script>
-        const seal = document.getElementById("seal");
-        const envelope = document.getElementById("envelope");
-        const invite = document.getElementById("invite");
-        const openingIntro = document.querySelector(".opening-intro");
-
-        let isOpening = false;
-        let countdownIntervalId = null;
-        let headerCountdownIntervalId = null;
-        const CURTAIN_REVEAL_MS = 2300;
-
-        const hideIntroSec = 10_000;
-
-        openingIntro.classList.add('show-tap')
-
-        // Show opening hint for 2 seconds.
-        // if (openingIntro) {
-        //     openingIntro.classList.add("show-tap");
-        //     window.setTimeout(() => openingIntro.classList.remove("show-tap"), hideIntroSec);
-        // }
-
-        function startHeaderCountdown() {
-            const container = document.querySelector(".invite-countdown");
-            if (!container) return;
-
-            const iso = container.getAttribute("data-date");
-            const target = iso ? new Date(iso) : null;
-            if (!target || Number.isNaN(target.getTime())) return;
-
-            const daysEl = document.getElementById("headerDays");
-            const hoursEl = document.getElementById("headerHours");
-            const minutesEl = document.getElementById("headerMinutes");
-            const secondsEl = document.getElementById("headerSeconds");
-            const messageEl = document.getElementById("headerMessage");
-            const countdownEl = container.querySelector(".countdown");
-
-            if (headerCountdownIntervalId !== null) {
-                window.clearInterval(headerCountdownIntervalId);
-                headerCountdownIntervalId = null;
-            }
-
-            const tick = () => {
-                const now = new Date().getTime();
-                const distance = target.getTime() - now;
-
-                if (distance <= 0) {
-                    if (countdownEl) countdownEl.style.display = "none";
-                    if (messageEl) messageEl.textContent = "The big day is here!";
-                    if (headerCountdownIntervalId !== null) {
-                        window.clearInterval(headerCountdownIntervalId);
-                        headerCountdownIntervalId = null;
-                    }
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((distance / (1000 * 60)) % 60);
-                const seconds = Math.floor((distance / 1000) % 60);
-
-                const pad2 = (n) => String(n).padStart(2, "0");
-                if (daysEl) daysEl.textContent = String(days);
-                if (hoursEl) hoursEl.textContent = pad2(hours);
-                if (minutesEl) minutesEl.textContent = pad2(minutes);
-                if (secondsEl) secondsEl.textContent = pad2(seconds);
-                if (messageEl) messageEl.textContent = "";
-            };
-
-            tick();
-            headerCountdownIntervalId = window.setInterval(tick, 1000);
-        }
-
-        function startWeddingCountdown() {
-            const el = document.getElementById("weddingCountdown");
-            if (!el) return;
-            const dayEl = document.getElementById("weddingDay");
-            const monthEl = document.getElementById("weddingMonth");
-            const yearEl = document.getElementById("weddingYear");
-
-            const iso = el.getAttribute("data-date");
-            const target = iso ? new Date(iso) : null;
-            if (!target || Number.isNaN(target.getTime())) {
-                el.textContent = "26/09/2026";
-                return;
-            }
-
-            if (dayEl || monthEl || yearEl) {
-                const dd = String(target.getDate()).padStart(2, "0");
-                const yyyy = String(target.getFullYear());
-                const month = target
-                    .toLocaleString("en-US", { month: "long" })
-                    .toUpperCase();
-
-                if (dayEl) dayEl.textContent = dd;
-                if (monthEl) monthEl.textContent = month;
-                if (yearEl) yearEl.textContent = yyyy;
-            }
-
-            if (countdownIntervalId !== null) {
-                window.clearInterval(countdownIntervalId);
-                countdownIntervalId = null;
-            }
-
-            const tick = () => {
-                const now = new Date();
-                const diff = target.getTime() - now.getTime();
-                if (diff <= 0) {
-                    el.textContent = "It’s today!";
-                    if (countdownIntervalId !== null) {
-                        window.clearInterval(countdownIntervalId);
-                        countdownIntervalId = null;
-                    }
-                    return;
-                }
-
-                const sec = Math.floor(diff / 1000);
-                const days = Math.floor(sec / 86400);
-                const hours = Math.floor((sec % 86400) / 3600);
-                const mins = Math.floor((sec % 3600) / 60);
-                const secs = sec % 60;
-
-                const pad = (n) => String(n).padStart(2, "0");
-                el.textContent = `${days}d ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
-            };
-
-            tick();
-            countdownIntervalId = window.setInterval(tick, 1000);
-        }
-
-        function initPromiseCarousel() {
-            const carousel = document.querySelector(".promise-carousel");
-            if (!carousel || carousel.dataset.initialized === "true") return;
-
-            const slides = Array.from(carousel.querySelectorAll(".promise-carousel__slide"));
-            const dots = Array.from(carousel.querySelectorAll(".promise-carousel__dot"));
-            const prevBtn = carousel.querySelector(".promise-carousel__btn--prev");
-            const nextBtn = carousel.querySelector(".promise-carousel__btn--next");
-            if (slides.length === 0) return;
-
-            let activeIndex = 0;
-            let autoplayId = null;
-            const AUTOPLAY_MS = 3500;
-
-            const showSlide = (index) => {
-                activeIndex = (index + slides.length) % slides.length;
-                slides.forEach((slide, slideIndex) => {
-                    slide.classList.toggle("is-active", slideIndex === activeIndex);
-                });
-                dots.forEach((dot, dotIndex) => {
-                    dot.classList.toggle("is-active", dotIndex === activeIndex);
-                });
-            };
-
-            const stopAutoplay = () => {
-                if (autoplayId !== null) {
-                    window.clearInterval(autoplayId);
-                    autoplayId = null;
-                }
-            };
-
-            const startAutoplay = () => {
-                stopAutoplay();
-                autoplayId = window.setInterval(() => {
-                    showSlide(activeIndex + 1);
-                }, AUTOPLAY_MS);
-            };
-
-            if (prevBtn) prevBtn.addEventListener("click", () => {
-                showSlide(activeIndex - 1);
-                startAutoplay();
-            });
-
-            if (nextBtn) nextBtn.addEventListener("click", () => {
-                showSlide(activeIndex + 1);
-                startAutoplay();
-            });
-
-            dots.forEach((dot, index) => {
-                dot.addEventListener("click", () => {
-                    showSlide(index);
-                    startAutoplay();
-                });
-            });
-
-            carousel.addEventListener("mouseenter", stopAutoplay);
-            carousel.addEventListener("mouseleave", startAutoplay);
-            carousel.addEventListener("touchstart", stopAutoplay, { passive: true });
-            carousel.addEventListener("touchend", startAutoplay, { passive: true });
-            document.addEventListener("visibilitychange", () => {
-                if (document.hidden) {
-                    stopAutoplay();
-                } else {
-                    startAutoplay();
-                }
-            });
-
-            showSlide(0);
-            startAutoplay();
-            carousel.dataset.initialized = "true";
-        }
-
-        function initMusicExperience() {
-            const players = Array.from(document.querySelectorAll(".music-player"));
-            if (players.length === 0) return;
-
-            const formatTime = (secs) => {
-                if (!Number.isFinite(secs) || secs < 0) return "0:00";
-                const totalSeconds = Math.floor(secs);
-                const minutes = Math.floor(totalSeconds / 60);
-                const seconds = totalSeconds % 60;
-                return `${minutes}:${String(seconds).padStart(2, "0")}`;
-            };
-
-            players.forEach((player) => {
-                if (player.dataset.initialized === "true") return;
-
-                const audio = player.querySelector(".music-player__audio");
-                const progressBtn = player.querySelector(".music-player__progress");
-                const progressFill = player.querySelector(".music-player__progress-fill");
-                const progressThumb = player.querySelector(".music-player__progress-thumb");
-                const currentTimeEl = player.querySelector(".music-player__time--current");
-                const totalTimeEl = player.querySelector(".music-player__time--total");
-                const playBtn = player.querySelector(".music-player__play-btn");
-                const prevBtn = player.querySelector(".music-player__prev-btn");
-                const nextBtn = player.querySelector(".music-player__next-btn");
-                const repeatBtn = player.querySelector(".music-player__repeat-btn");
-                const favouriteBtn = player.querySelector(".music-player__favourite-btn");
-                if (!audio || !progressBtn || !progressFill || !progressThumb || !currentTimeEl || !totalTimeEl || !playBtn) {
-                    return;
-                }
-
-                const songTitleEl = player.closest(".music-experience__inner")?.querySelector(".music-experience__subtitle");
-                const tracks = [
-                    { title: "Ncono Sishade", src: "music/jayjayy-dj-tshegu-quinton-deep-ncono-sishade-official-audio-4gwgcp7zhoa_YidgZXov.mp3" },
-                    { title: "Kgomo Wedding Song", src: "music/jonas-gwangwa-kgomo-wedding-song-official-audio-stqesxbiexu_GzcyCuUs.mp3" },
-                    { title: "Ke Lorile", src: "music/pleasure-tsa-manyalo-ke-lorile-official-music-video-saufdtirsmo_LfdANYLf.mp3" },
-                    { title: "Hey Wena", src: "music/samthing-soweto-entity-musiq-ft-alie-keys-hey-wena-lyrics-oj7z8fkah2c_K7XU0cRV.mp3" },
-                    { title: "Yeshua (Jesus Image)", src: "music/yeshua-jesus-image-michael-koulianos-ivub1k0b0ze_rjnmumES.mp3" },
-                    { title: "Dream About You", src: "music/lloyiso-dream-about-you-official-audio-opjgbspr7ig_rWKFsJY0.mp3" }
-                ];
-                if (tracks.length === 0) return;
-
-                audio.loop = false;
-                let currentTrackIndex = 0;
-                const initialSrc = audio.getAttribute("src") || "";
-                const detectedTrackIndex = tracks.findIndex((track) => initialSrc.includes(track.src));
-                if (detectedTrackIndex >= 0) {
-                    currentTrackIndex = detectedTrackIndex;
-                } else {
-                    audio.setAttribute("src", tracks[currentTrackIndex].src);
-                }
-                if (songTitleEl) {
-                    songTitleEl.textContent = tracks[currentTrackIndex].title;
-                }
-
-                let rafId = null;
-
-                const pickRandomNextTrackIndex = () => {
-                    if (tracks.length <= 1) return currentTrackIndex;
-                    let nextIndex = currentTrackIndex;
-                    while (nextIndex === currentTrackIndex) {
-                        nextIndex = Math.floor(Math.random() * tracks.length);
-                    }
-                    return nextIndex;
-                };
-
-                const playTrackByIndex = async (trackIndex, forcePlay = false) => {
-                    if (trackIndex < 0 || trackIndex >= tracks.length) return;
-                    const shouldPlay = forcePlay || !audio.paused || audio.ended;
-
-                    currentTrackIndex = trackIndex;
-                    audio.setAttribute("src", tracks[currentTrackIndex].src);
-                    if (songTitleEl) {
-                        songTitleEl.textContent = tracks[currentTrackIndex].title;
-                    }
-                    audio.currentTime = 0;
-                    audio.load();
-                    updateVisualState();
-
-                    if (shouldPlay) {
-                        try {
-                            await audio.play();
-                            startRaf();
-                        } catch (err) {
-                            console.warn("Audio playback failed:", err);
-                        }
-                    }
-                };
-
-                const updateVisualState = () => {
-                    const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
-                    const current = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
-                    const ratio = duration > 0 ? Math.min(1, Math.max(0, current / duration)) : 0;
-                    const percent = `${ratio * 100}%`;
-
-                    progressFill.style.width = percent;
-                    progressThumb.style.left = percent;
-                    currentTimeEl.textContent = formatTime(current);
-                    totalTimeEl.textContent = formatTime(duration);
-                    playBtn.classList.toggle("is-playing", !audio.paused && !audio.ended);
-                    playBtn.setAttribute("aria-label", audio.paused || audio.ended ? "Play soundtrack" : "Pause soundtrack");
-                };
-
-                const stopRaf = () => {
-                    if (rafId !== null) {
-                        window.cancelAnimationFrame(rafId);
-                        rafId = null;
-                    }
-                };
-
-                const startRaf = () => {
-                    stopRaf();
-                    const tick = () => {
-                        updateVisualState();
-                        if (!audio.paused && !audio.ended) {
-                            rafId = window.requestAnimationFrame(tick);
-                        }
-                    };
-                    rafId = window.requestAnimationFrame(tick);
-                };
-
-                const seekToClientX = (clientX) => {
-                    const rect = progressBtn.getBoundingClientRect();
-                    if (rect.width <= 0 || !Number.isFinite(audio.duration)) return;
-                    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
-                    audio.currentTime = ratio * audio.duration;
-                    updateVisualState();
-                };
-
-                playBtn.addEventListener("click", async () => {
-                    try {
-                        if (audio.paused || audio.ended) {
-                            await audio.play();
-                            startRaf();
-                        } else {
-                            audio.pause();
-                            stopRaf();
-                        }
-                        updateVisualState();
-                    } catch (err) {
-                        console.warn("Audio playback failed:", err);
-                    }
-                });
-
-                prevBtn?.addEventListener("click", () => {
-                    audio.currentTime = Math.max(0, audio.currentTime - 10);
-                    updateVisualState();
-                });
-
-                nextBtn?.addEventListener("click", async () => {
-                    const nextTrackIndex = pickRandomNextTrackIndex();
-                    await playTrackByIndex(nextTrackIndex, true);
-                });
-
-                repeatBtn?.addEventListener("click", () => {
-                    audio.loop = !audio.loop;
-                    repeatBtn.classList.toggle("is-active", audio.loop);
-                });
-
-                favouriteBtn?.addEventListener("click", () => {
-                    favouriteBtn.classList.toggle("is-active");
-                });
-
-                progressBtn.addEventListener("click", (e) => {
-                    seekToClientX(e.clientX);
-                });
-
-                progressBtn.addEventListener("keydown", (e) => {
-                    if (e.key === "ArrowRight") {
-                        e.preventDefault();
-                        audio.currentTime = Math.min((audio.duration || 0), audio.currentTime + 5);
-                        updateVisualState();
-                    } else if (e.key === "ArrowLeft") {
-                        e.preventDefault();
-                        audio.currentTime = Math.max(0, audio.currentTime - 5);
-                        updateVisualState();
-                    } else if (e.key === "Home") {
-                        e.preventDefault();
-                        audio.currentTime = 0;
-                        updateVisualState();
-                    } else if (e.key === "End" && Number.isFinite(audio.duration)) {
-                        e.preventDefault();
-                        audio.currentTime = audio.duration;
-                        updateVisualState();
-                    }
-                });
-
-                audio.addEventListener("loadedmetadata", updateVisualState);
-                audio.addEventListener("durationchange", updateVisualState);
-                audio.addEventListener("timeupdate", updateVisualState);
-                audio.addEventListener("pause", () => {
-                    stopRaf();
-                    updateVisualState();
-                });
-                audio.addEventListener("play", startRaf);
-                audio.addEventListener("ended", () => {
-                    stopRaf();
-                    if (!audio.loop && tracks.length > 1) {
-                        const nextTrackIndex = pickRandomNextTrackIndex();
-                        void playTrackByIndex(nextTrackIndex, true);
-                        return;
-                    }
-                    updateVisualState();
-                });
-
-                repeatBtn?.classList.toggle("is-active", audio.loop);
-                updateVisualState();
-                player.dataset.initialized = "true";
-            });
-        }
-
-        function openInvitation() {
-            if (isOpening) return;
-            isOpening = true;
-
-            seal.classList.add("is-hidden");
-            envelope.classList.add("open");
-            invite.classList.add("show");
-            document.body.classList.add("invite-open");
-            startHeaderCountdown();
-            startWeddingCountdown();
-            initPromiseCarousel();
-            initMusicExperience();
-            const openingTrackAudio = document.querySelector(".music-player__audio");
-            if (openingTrackAudio) {
-                openingTrackAudio.currentTime = 0;
-                openingTrackAudio.play().catch((err) => {
-                    console.warn("Opening soundtrack playback failed:", err);
-                });
-            }
-
-            window.setTimeout(() => {
-                envelope.style.display = "none";
-            }, CURTAIN_REVEAL_MS);
-        }
-
-        // If the invite is already visible (e.g. refreshed while open), start countdown.
-        if (invite.classList.contains("show")) {
-            document.body.classList.add("invite-open");
-            startHeaderCountdown();
-            startWeddingCountdown();
-            initPromiseCarousel();
-            initMusicExperience();
-        }
-
-        seal.addEventListener("click", (e) => {
-            e.stopPropagation();
-            openInvitation();
-        });
-
-        seal.addEventListener("keydown", (e) => {
-            if (e.key !== "Enter" && e.key !== " ") return;
-            e.preventDefault();
-            e.stopPropagation();
-            openInvitation();
-        });
-
-        envelope.addEventListener("click", () => {
-            openInvitation();
-        });
-
-        // Upward scroll/swipe should also open the curtain.
-        let startY = null;
-        let pointerStartY = null;
-        const UPWARD_THRESHOLD_PX = 24;
-
-        function handleUpwardDelta(deltaY) {
-            if (isOpening) return;
-            if (deltaY < -UPWARD_THRESHOLD_PX) {
-                openInvitation();
-            }
-        }
-
-        envelope.addEventListener("pointerdown", (e) => {
-            if (isOpening) return;
-            pointerStartY = e.clientY;
-        });
-
-        envelope.addEventListener("pointermove", (e) => {
-            if (isOpening || pointerStartY === null) return;
-            const dy = e.clientY - pointerStartY;
-            handleUpwardDelta(dy);
-        });
-
-        envelope.addEventListener("pointerup", () => {
-            pointerStartY = null;
-        });
-
-        envelope.addEventListener("pointercancel", () => {
-            pointerStartY = null;
-        });
-
-        envelope.addEventListener("touchstart", (e) => {
-            if (isOpening || e.touches.length === 0) return;
-            startY = e.touches[0].clientY;
-        }, { passive: true });
-
-        envelope.addEventListener("touchmove", (e) => {
-            if (isOpening || startY === null || e.touches.length === 0) return;
-            const dy = e.touches[0].clientY - startY;
-            if (dy < -UPWARD_THRESHOLD_PX) {
-                e.preventDefault();
-                openInvitation();
-                startY = null;
-            }
-        }, { passive: false });
-
-        envelope.addEventListener("touchend", () => {
-            startY = null;
-        }, { passive: true });
-
-        envelope.addEventListener("wheel", (e) => {
-            if (isOpening) return;
-            if (e.deltaY < -8) {
-                e.preventDefault();
-                openInvitation();
-            }
-        }, { passive: false });
-
-        window.addEventListener("wheel", (e) => {
-            if (isOpening || envelope.style.display === "none") return;
-            if (e.deltaY < -8) {
-                e.preventDefault();
-                openInvitation();
-            }
-        }, { passive: false });
-
-        window.addEventListener("touchmove", (e) => {
-            if (isOpening || envelope.style.display === "none" || startY === null || e.touches.length === 0) return;
-            const dy = e.touches[0].clientY - startY;
-            if (dy < -UPWARD_THRESHOLD_PX) {
-                e.preventDefault();
-                openInvitation();
-                startY = null;
-            }
-        }, { passive: false });
-
-        window.addEventListener("touchend", () => {
-            startY = null;
-        });
-    </script>
+<!-- ENVELOPE -->
+<div class="envelope" id="envelope">
+<div class="curtain curtain--left" aria-hidden="true"></div>
+<div class="curtain curtain--right" aria-hidden="true"></div>
+<div class="curtain-sheen" aria-hidden="true"></div>
+<div class="opening-intro" aria-label="Opening invitation">
+<p class="opening-intro__kicker">The Wedding Of</p>
+<div class="opening-intro__monogram" aria-label="Luxury monogram">
+<span class="opening-intro__initial opening-intro__initial--left">T</span>
+<span class="opening-intro__amp">&amp;</span>
+<span class="opening-intro__initial opening-intro__initial--right">B</span>
+</div>
+
+<div class="opening-control" aria-hidden="true">
+<span class="opening-control__line"></span>
+<div class="seal" id="seal" role="button" tabindex="0" aria-label="Open invitation"></div>
+<span class="opening-control__line"></span>
+</div>
+
+<p class="tap-me">Part The Curtains</p>
+</div>
+</div>
+
+<!-- INVITE CONTENT -->
+<div class="invite" id="invite">
+<section class="invite-hero" aria-label="Wedding invitation">
+<div class="invite-hero__card">
+<div class="invite-hero__arch">
+<div class="invite-hero__photo-wrap">
+<img class="invite-hero__photo"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-1.jpg"
+alt="Thabiso and Boitumelo" width="400" height="400" />
+</div>
+</div>
+<div class="invite-hero__cream">
+<div class="invite-hero__monogram" aria-label="B and T monogram">
+<img src="tumipreweddingphotoshoot-photo-download-1of1/bandt.png" alt="" />
+</div>
+<p class="invite-hero__wedding">Wedding</p>
+<p class="invite-hero__celebration">Celebration</p>
+</div>
+</div>
+</section>
+
+<section class="invite-section invite-section--transparent" aria-label="Invitation details">
+<div class="invite-section__card">
+<!-- <div class="invite-watermark" aria-hidden="true">B &amp; T</div> -->
+<header class="invite-section__header">
+<!-- <p class="invite-kicker">You are cordially invited to the wedding of</p> -->
+<p class="invite-union__subtitle">
+<span>You are cordially invited to</span>
+<span>the wedding of</span>
+</p>
+<div class="invite-union">
+<p class="invite-union__names">
+<span class="invite-union__name-line">Thabiso Raleie</span>
+<span class="invite-union__amp">&amp;</span>
+<span class="invite-union__name-line">Boitumelo Thobejane</span>
+</p>
+<p class="invite-union__subtitle">
+<span>Celebrating love,</span>
+<span>laughter and forever</span>
+</p>
+</div>
+</header>
+
+<section class="editorial-countdown invite-countdown" data-date="2026-09-26T13:00:00+02:00"
+aria-label="Wedding date and countdown">
+<div class="editorial-countdown__divider" aria-hidden="true"></div>
+<div class="editorial-countdown__inner">
+<p class="editorial-countdown__date">
+<span class="editorial-countdown__day">26</span>
+<span class="editorial-countdown__month">SEPTEMBER</span>
+<span class="editorial-countdown__year">2026</span>
+</p>
+<p class="editorial-countdown__heading">WEDDING COUNTDOWN</p>
+<div class="countdown editorial-countdown__timer" aria-label="Countdown timer">
+<div class="time-box">
+<span id="headerDays">00</span>
+<small>Days</small>
+</div>
+<span class="editorial-countdown__dot" aria-hidden="true"></span>
+<div class="time-box">
+<span id="headerHours">00</span>
+<small>Hours</small>
+</div>
+<span class="editorial-countdown__dot" aria-hidden="true"></span>
+<div class="time-box">
+<span id="headerMinutes">00</span>
+<small>Mins</small>
+</div>
+<span class="editorial-countdown__dot" aria-hidden="true"></span>
+<div class="time-box">
+<span id="headerSeconds">00</span>
+<small>Secs</small>
+</div>
+</div>
+<div class="message" id="headerMessage"></div>
+</div>
+</section>
+
+<div class="invite-section__main" aria-label="Invitation main content">
+<div class="invite-strip" aria-hidden="true"></div>
+
+<div class="invite-photo" aria-label="Couple photo">
+<img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-11.jpg"
+alt="Thabiso and Boitumelo" />
+<div class="invite-photo__monogram" aria-hidden="true">
+<img src="tumipreweddingphotoshoot-photo-download-1of1/bandt.png" alt="" />
+</div>
+</div>
+</div>
+<div class="invite-strip invite-strip--after-main" aria-hidden="true"></div>
+</div>
+</section>
+
+<section class="details-section" aria-label="Event details panel">
+<div class="details-bg">
+<div class="details-card">
+<header class="details-title-wrap" aria-label="The details heading">
+<p class="details-title-script" data-typewriter-text="the" aria-hidden="true"></p>
+<p class="details-title-main" data-typewriter-text="DETAILS" aria-hidden="true"></p>
+</header>
+
+<div class="details-editorial">
+<article class="details-block">
+<p class="details-label">Date</p>
+<div class="details-divider" aria-hidden="true"></div>
+<p class="details-main editorial-countdown__date">
+<span class="editorial-countdown__day">26</span>
+<span class="editorial-countdown__month">SEPTEMBER</span>
+<span class="editorial-countdown__year">2026</span>
+</p>
+</article>
+
+<article class="details-block">
+<p class="details-label">Venue</p>
+<div class="details-divider" aria-hidden="true"></div>
+<p class="details-main">4 Ina Road, Dawn Park, Boksburg</p>
+<a class="details-link" href="https://www.google.com/maps/search/?api=1&query=4+Ina+Road%2C+Dawn+Park"
+target="_blank" rel="noopener noreferrer"
+aria-label="View directions to 4 Ina Road, Dawn Park">View directions</a>
+</article>
+
+<article class="details-block">
+<p class="details-label">Contact</p>
+<div class="details-divider" aria-hidden="true"></div>
+<p class="details-main">072 184 3279</p>
+</article>
+
+<article class="details-block">
+<p class="details-label">Colour palette</p>
+<div class="details-divider" aria-hidden="true"></div>
+<p class="details-main">Shades of Blue</p>
+<section class="palette-section" aria-label="Colour palette">
+<div class="palette-card">
+<div class="palette-swatches" aria-label="Palette swatches">
+<span class="swatch swatch--blue1"></span>
+<span class="swatch swatch--blue2"></span>
+<span class="swatch swatch--blue3"></span>
+<span class="swatch swatch--blue4"></span>
+<span class="swatch swatch--blue5"></span>
+<span class="swatch swatch--blue6"></span>
+</div>
+</div>
+</section>
+</article>
+</div>
+</div>
+</div>
+</section>
+
+<section class="events-section" aria-label="Order of events">
+<div class="events-bg">
+<section class="events-editorial" aria-label="Order of events">
+<div class="events-transition-divider" aria-hidden="true"></div>
+<div class="verse-transition-divider verse-transition-divider--top" aria-hidden="true"></div>
+<header class="events-title-wrap" aria-label="The day heading">
+<p class="events-title-script" data-typewriter-text="the" aria-hidden="true"></p>
+<p class="events-title-main" data-typewriter-text="DAY" aria-hidden="true"></p>
+</header>
+
+</section><div class="events-timeline">
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M7 20v-7m10 7v-7M5 10h14M8 10V6h8v4M6 20h12" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">12:00 PM</p>
+<h3 class="events-event">Guests Seating</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<circle cx="9" cy="12" r="4" />
+<circle cx="15" cy="12" r="4" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">12:30 PM</p>
+<h3 class="events-event">Holy Matrimony</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M12 4v16M6.5 7.5l11 9M6.5 16.5l11-9" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">1:30 PM</p>
+<h3 class="events-event">Wedding Celebration</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M12 5v14M8 9h8M8 5h8M10 19h4" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">2:30 PM</p>
+<h3 class="events-event">Opening of Ceremonies</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M12 5v9M9 14h6M10 19h4M8 8.5a4 4 0 1 1 8 0v2.5H8z" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">3:00 PM</p>
+<h3 class="events-event">Speeches</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M7.5 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM4.5 20c.5-2.2 2.1-3.5 4-3.5s3.5 1.3 4 3.5m3-3.5c1.9 0 3.5 1.3 4 3.5" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">3:45 PM</p>
+<h3 class="events-event">Response from Groom &amp; Bride</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M8 5h8M9 5l1 8m4-8-1 8M10 13h4M11 13v6m2-6v6" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">4:15 PM</p>
+<h3 class="events-event">Toast</h3>
+</div>
+</article>
+
+<article class="events-item">
+<span class="events-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24" focusable="false">
+<path d="M6.5 14.5 12 4l2.2 4.2L17.5 7l-2 4.8 2 1.7-4.2.3L12 18l-1.3-4.2-4.2-.3 2-1.7z" />
+</svg>
+</span>
+<div class="events-body">
+<p class="events-time">5:00 PM</p>
+<h3 class="events-event">Celebration Continues</h3>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="verse-section" aria-label="Spiritual message and registry">
+<div class="verse-bg">
+<!-- <div class="invite-strip" aria-hidden="true"></div> -->
+<div class="verse-transition-divider verse-transition-divider--top" aria-hidden="true"></div>
+
+<div class="verse-registry" aria-label="Registry options">
+<div class="registry-intro">
+<header class="registry-title-wrap" aria-label="The registry heading">
+<p class="registry-title-script" data-typewriter-text="the" aria-hidden="true"></p>
+<p class="registry-title-main" data-typewriter-text="REGISTRY" aria-hidden="true"></p>
+</header>
+<p class="registry-title">A Small Token of Love</p>
+<p class="registry-subtitle">
+Your presence is our greatest gift, but if you would like to bless us further, kindly
+explore our registry options below.
+</p>
+</div>
+
+<div class="registry-divider" aria-hidden="true"></div>
+
+<div class="registry-layout">
+<div class="registry-content">
+<p class="registry-text">
+Select your preferred option below.
+</p>
+
+<ul class="registry-links" aria-label="Registry stores">
+<li><a class="registry-link" href="https://www.mrphome.com/en_za/giftregistry/view/index/id/BTWEDD1857/" aria-label="Open Mr Price Home registry" target="_blank" rel="noopener noreferrer">Mr Price Home Registry</a></li>
+<li><a class="registry-link" href="https://carrolboyes.com/za/gift-registry/view/gift/2710/weddinggift.html" aria-label="Open Carrol Boyes registry" target="_blank" rel="noopener noreferrer">Carrol Boyes Registry</a></li>
+<li><a class="registry-link" href="https://m.yuppiechef.com/registry.htm?uuid=89181ba1-b003-4c05-a00e-5c52b640c6fd&action=view" aria-label="Open Yuppiechef registry" target="_blank" rel="noopener noreferrer">Yuppiechef Registry</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<section class="music-experience" aria-label="Music experience">
+<div class="music-experience__inner">
+<p class="music-experience__kicker">OUR SOUNDTRACK</p>
+<p class="music-experience__subtitle">Dream About You</p>
+
+<div class="music-player" aria-label="Wedding soundtrack player">
+<audio class="music-player__audio" preload="metadata"
+src="music/lloyiso-dream-about-you-official-audio-opjgbspr7ig_rWKFsJY0.mp3"></audio>
+
+<div class="music-player__timeline">
+<span class="music-player__time music-player__time--current">0:00</span>
+<button class="music-player__progress" type="button" aria-label="Seek audio position">
+<span class="music-player__progress-fill"></span>
+<span class="music-player__progress-thumb" aria-hidden="true"></span>
+</button>
+<span class="music-player__time music-player__time--total">0:00</span>
+</div>
+
+<div class="music-player__controls" aria-label="Playback controls">
+<!-- <button class="music-player__icon-btn music-player__repeat-btn" type="button"
+aria-label="Toggle repeat">
+<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+<path d="M16 7h3v3M8 17H5v-3M7 8c1.1-1.2 2.7-2 4.5-2H19M17 16c-1.1 1.2-2.7 2-4.5 2H5"
+fill="none" />
+</svg>
+</button> -->
+
+<div class="music-player__main-controls">
+<button class="music-player__icon-btn music-player__skip-btn music-player__prev-btn"
+type="button" aria-label="Previous">
+<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+<path d="M6 6v12M18 7l-8 5 8 5z" fill="none" />
+</svg>
+</button>
+
+<button class="music-player__play-btn" type="button" aria-label="Play soundtrack">
+<svg class="music-player__play-icon" viewBox="0 0 24 24" focusable="false"
+aria-hidden="true">
+<path d="M9 7.2v9.6L17 12z" />
+</svg>
+<svg class="music-player__pause-icon" viewBox="0 0 24 24" focusable="false"
+aria-hidden="true">
+<path d="M9 7h2.8v10H9zm4.2 0H16v10h-2.8z" />
+</svg>
+</button>
+
+<button class="music-player__icon-btn music-player__skip-btn music-player__next-btn"
+type="button" aria-label="Next">
+<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+<path d="M18 6v12M6 7l8 5-8 5z" fill="none" />
+</svg>
+</button>
+</div>
+
+<!-- <button class="music-player__icon-btn music-player__favourite-btn" type="button"
+aria-label="Save as favourite">
+<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+<path d="M12 20.2 5.8 14a4.4 4.4 0 0 1 0-6.2 4.4 4.4 0 0 1 6.2 0l.1.1.1-.1a4.4 4.4 0 0 1 6.2 0 4.4 4.4 0 0 1 0 6.2z"
+fill="none" />
+</svg>
+</button> -->
+</div>
+</div>
+</div>
+</section>
+
+<div class="verse-photoFrame" aria-label="Couple photo frame">
+<div class="verse-photoFrame__inner">
+<img src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-5.jpg"
+alt="Thabiso and Boitumelo" />
+</div>
+</div>
+
+<p class="verse-quote">
+Above all, <strong>love</strong> each other deeply, because <strong>love</strong> covers over a multitude of sin.
+</p>
+<p class="verse-ref">1 Peter 4:8</p>
+<div class="verse-transition-divider" aria-hidden="true"></div>
+<p class="wedding-hashtag" aria-label="Wedding hashtag">#RaleieEverAfter</p>
+<!-- <img class="wedding-hashtag-floral"
+src="tumipreweddingphotoshoot-photo-download-1of1/new-flowers.png"
+alt=""
+aria-hidden="true" /> -->
+</div>
+
+</section>
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- <section class="promise-section" aria-label="Promise kept">
+<div class="promise-phone">
+<div class="promise-inner">
+
+
+<div class="promise-stage">
+<div class="promise-arch" aria-hidden="true"></div>
+
+<div class="promise-photo promise-carousel" aria-label="Couple portrait carousel">
+<button class="promise-carousel__btn promise-carousel__btn--prev" type="button"
+aria-label="Previous photo">&#10094;</button>
+
+<div class="promise-carousel__track">
+<div class="promise-carousel__arch-mask">
+<img class="promise-carousel__slide is-active"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-1.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-2.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-3.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-4.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-5.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-6.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-7.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-8.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-9.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-10.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-11.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-12.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-13.jpg"
+alt="Thabiso and Boitumelo" />
+<img class="promise-carousel__slide"
+src="tumipreweddingphotoshoot-photo-download-1of1/Highlights/optimized/Photoshoot-14.jpg"
+alt="Thabiso and Boitumelo" />
+</div>
+</div> 
+
+<button class="promise-carousel__btn promise-carousel__btn--next" type="button"
+aria-label="Next photo">&#10095;</button>
+
+<div class="promise-carousel__dots" aria-label="Photo selector">
+<button class="promise-carousel__dot is-active" type="button"
+aria-label="Show photo 1"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 2"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 3"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 4"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 5"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 6"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 7"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 8"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 9"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 10"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 11"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 12"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 13"></button>
+<button class="promise-carousel__dot" type="button" aria-label="Show photo 14"></button>
+</div>
+</div>
+
+
+
+</div>
+</div>
+</div>
+</section> -->
+</div>
+
+<!-- Floating soundtrack mute — fixed above content once the invitation is open -->
+<div class="music-overlay-fab-wrap" data-music-overlay>
+<button type="button" class="music-overlay-fab" id="musicOverlayFab" aria-label="Mute soundtrack"
+aria-pressed="false">
+<span class="music-overlay-fab__ripple" aria-hidden="true"></span>
+<span class="music-overlay-fab__icons">
+<svg class="music-overlay-fab__icon music-overlay-fab__icon--sound" viewBox="0 0 24 24"
+aria-hidden="true" focusable="false">
+<path d="M11 5 6 9H3v6h3l5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.2"
+stroke-linejoin="round" />
+<path d="M15.5 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="1.2"
+stroke-linecap="round" />
+<path d="M17.7 6.3a8 8 0 0 1 0 11.4" fill="none" stroke="currentColor" stroke-width="1.2"
+stroke-linecap="round" />
+</svg>
+<svg class="music-overlay-fab__icon music-overlay-fab__icon--mute" viewBox="0 0 24 24"
+aria-hidden="true" focusable="false">
+<path d="M11 5 6 9H3v6h3l5 4V5Z" fill="none" stroke="currentColor" stroke-width="1.2"
+stroke-linejoin="round" />
+<path d="M16 9l6 6M22 9l-6 6" fill="none" stroke="currentColor" stroke-width="1.2"
+stroke-linecap="round" />
+</svg>
+</span>
+</button>
+</div>
+
+<script>
+const seal = document.getElementById("seal");
+const envelope = document.getElementById("envelope");
+const invite = document.getElementById("invite");
+const openingIntro = document.querySelector(".opening-intro");
+
+let isOpening = false;
+let countdownIntervalId = null;
+let headerCountdownIntervalId = null;
+const CURTAIN_REVEAL_MS = 2300;
+
+const hideIntroSec = 10_000;
+
+openingIntro.classList.add('show-tap')
+
+// Show opening hint for 2 seconds.
+// if (openingIntro) {
+// openingIntro.classList.add("show-tap");
+// window.setTimeout(() => openingIntro.classList.remove("show-tap"), hideIntroSec);
+// }
+
+function startHeaderCountdown() {
+const container = document.querySelector(".invite-countdown");
+if (!container) return;
+
+const iso = container.getAttribute("data-date");
+const target = iso ? new Date(iso) : null;
+if (!target || Number.isNaN(target.getTime())) return;
+
+const daysEl = document.getElementById("headerDays");
+const hoursEl = document.getElementById("headerHours");
+const minutesEl = document.getElementById("headerMinutes");
+const secondsEl = document.getElementById("headerSeconds");
+const messageEl = document.getElementById("headerMessage");
+const countdownEl = container.querySelector(".countdown");
+
+if (headerCountdownIntervalId !== null) {
+window.clearInterval(headerCountdownIntervalId);
+headerCountdownIntervalId = null;
+}
+
+const tick = () => {
+const now = new Date().getTime();
+const distance = target.getTime() - now;
+
+if (distance <= 0) {
+if (countdownEl) countdownEl.style.display = "none";
+if (messageEl) messageEl.textContent = "The big day is here!";
+if (headerCountdownIntervalId !== null) {
+window.clearInterval(headerCountdownIntervalId);
+headerCountdownIntervalId = null;
+}
+return;
+}
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+const minutes = Math.floor((distance / (1000 * 60)) % 60);
+const seconds = Math.floor((distance / 1000) % 60);
+
+const pad2 = (n) => String(n).padStart(2, "0");
+if (daysEl) daysEl.textContent = String(days);
+if (hoursEl) hoursEl.textContent = pad2(hours);
+if (minutesEl) minutesEl.textContent = pad2(minutes);
+if (secondsEl) secondsEl.textContent = pad2(seconds);
+if (messageEl) messageEl.textContent = "";
+};
+
+tick();
+headerCountdownIntervalId = window.setInterval(tick, 1000);
+}
+
+function startWeddingCountdown() {
+const el = document.getElementById("weddingCountdown");
+if (!el) return;
+const dayEl = document.getElementById("weddingDay");
+const monthEl = document.getElementById("weddingMonth");
+const yearEl = document.getElementById("weddingYear");
+
+const iso = el.getAttribute("data-date");
+const target = iso ? new Date(iso) : null;
+if (!target || Number.isNaN(target.getTime())) {
+el.textContent = "26/09/2026";
+return;
+}
+
+if (dayEl || monthEl || yearEl) {
+const dd = String(target.getDate()).padStart(2, "0");
+const yyyy = String(target.getFullYear());
+const month = target
+.toLocaleString("en-US", { month: "long" })
+.toUpperCase();
+
+if (dayEl) dayEl.textContent = dd;
+if (monthEl) monthEl.textContent = month;
+if (yearEl) yearEl.textContent = yyyy;
+}
+
+if (countdownIntervalId !== null) {
+window.clearInterval(countdownIntervalId);
+countdownIntervalId = null;
+}
+
+const tick = () => {
+const now = new Date();
+const diff = target.getTime() - now.getTime();
+if (diff <= 0) {
+el.textContent = "It’s today!";
+if (countdownIntervalId !== null) {
+window.clearInterval(countdownIntervalId);
+countdownIntervalId = null;
+}
+return;
+}
+
+const sec = Math.floor(diff / 1000);
+const days = Math.floor(sec / 86400);
+const hours = Math.floor((sec % 86400) / 3600);
+const mins = Math.floor((sec % 3600) / 60);
+const secs = sec % 60;
+
+const pad = (n) => String(n).padStart(2, "0");
+el.textContent = `${days}d ${pad(hours)}h ${pad(mins)}m ${pad(secs)}s`;
+};
+
+tick();
+countdownIntervalId = window.setInterval(tick, 1000);
+}
+
+function initPromiseCarousel() {
+const carousel = document.querySelector(".promise-carousel");
+if (!carousel || carousel.dataset.initialized === "true") return;
+
+const slides = Array.from(carousel.querySelectorAll(".promise-carousel__slide"));
+const dots = Array.from(carousel.querySelectorAll(".promise-carousel__dot"));
+const prevBtn = carousel.querySelector(".promise-carousel__btn--prev");
+const nextBtn = carousel.querySelector(".promise-carousel__btn--next");
+if (slides.length === 0) return;
+
+let activeIndex = 0;
+let autoplayId = null;
+const AUTOPLAY_MS = 3500;
+
+const showSlide = (index) => {
+activeIndex = (index + slides.length) % slides.length;
+slides.forEach((slide, slideIndex) => {
+slide.classList.toggle("is-active", slideIndex === activeIndex);
+});
+dots.forEach((dot, dotIndex) => {
+dot.classList.toggle("is-active", dotIndex === activeIndex);
+});
+};
+
+const stopAutoplay = () => {
+if (autoplayId !== null) {
+window.clearInterval(autoplayId);
+autoplayId = null;
+}
+};
+
+const startAutoplay = () => {
+stopAutoplay();
+autoplayId = window.setInterval(() => {
+showSlide(activeIndex + 1);
+}, AUTOPLAY_MS);
+};
+
+if (prevBtn) prevBtn.addEventListener("click", () => {
+showSlide(activeIndex - 1);
+startAutoplay();
+});
+
+if (nextBtn) nextBtn.addEventListener("click", () => {
+showSlide(activeIndex + 1);
+startAutoplay();
+});
+
+dots.forEach((dot, index) => {
+dot.addEventListener("click", () => {
+showSlide(index);
+startAutoplay();
+});
+});
+
+carousel.addEventListener("mouseenter", stopAutoplay);
+carousel.addEventListener("mouseleave", startAutoplay);
+carousel.addEventListener("touchstart", stopAutoplay, { passive: true });
+carousel.addEventListener("touchend", startAutoplay, { passive: true });
+document.addEventListener("visibilitychange", () => {
+if (document.hidden) {
+stopAutoplay();
+} else {
+startAutoplay();
+}
+});
+
+showSlide(0);
+startAutoplay();
+carousel.dataset.initialized = "true";
+}
+
+function initMusicExperience() {
+const players = Array.from(document.querySelectorAll(".music-player"));
+if (players.length === 0) return;
+
+const formatTime = (secs) => {
+if (!Number.isFinite(secs) || secs < 0) return "0:00";
+const totalSeconds = Math.floor(secs);
+const minutes = Math.floor(totalSeconds / 60);
+const seconds = totalSeconds % 60;
+return `${minutes}:${String(seconds).padStart(2, "0")}`;
+};
+
+players.forEach((player) => {
+if (player.dataset.initialized === "true") return;
+
+const audio = player.querySelector(".music-player__audio");
+const progressBtn = player.querySelector(".music-player__progress");
+const progressFill = player.querySelector(".music-player__progress-fill");
+const progressThumb = player.querySelector(".music-player__progress-thumb");
+const currentTimeEl = player.querySelector(".music-player__time--current");
+const totalTimeEl = player.querySelector(".music-player__time--total");
+const playBtn = player.querySelector(".music-player__play-btn");
+const prevBtn = player.querySelector(".music-player__prev-btn");
+const nextBtn = player.querySelector(".music-player__next-btn");
+const repeatBtn = player.querySelector(".music-player__repeat-btn");
+const favouriteBtn = player.querySelector(".music-player__favourite-btn");
+if (!audio || !progressBtn || !progressFill || !progressThumb || !currentTimeEl || !totalTimeEl || !playBtn) {
+return;
+}
+
+const songTitleEl = player.closest(".music-experience__inner")?.querySelector(".music-experience__subtitle");
+const tracks = [
+{ title: "Ncono Sishade", src: "music/jayjayy-dj-tshegu-quinton-deep-ncono-sishade-official-audio-4gwgcp7zhoa_YidgZXov.mp3" },
+{ title: "Kgomo Wedding Song", src: "music/jonas-gwangwa-kgomo-wedding-song-official-audio-stqesxbiexu_GzcyCuUs.mp3" },
+{ title: "Ke Lorile", src: "music/pleasure-tsa-manyalo-ke-lorile-official-music-video-saufdtirsmo_LfdANYLf.mp3" },
+{ title: "Hey Wena", src: "music/samthing-soweto-entity-musiq-ft-alie-keys-hey-wena-lyrics-oj7z8fkah2c_K7XU0cRV.mp3" },
+{ title: "Yeshua (Jesus Image)", src: "music/yeshua-jesus-image-michael-koulianos-ivub1k0b0ze_rjnmumES.mp3" },
+{ title: "Dream About You", src: "music/lloyiso-dream-about-you-official-audio-opjgbspr7ig_rWKFsJY0.mp3" }
+];
+if (tracks.length === 0) return;
+
+audio.loop = false;
+let currentTrackIndex = 0;
+const initialSrc = audio.getAttribute("src") || "";
+const detectedTrackIndex = tracks.findIndex((track) => initialSrc.includes(track.src));
+if (detectedTrackIndex >= 0) {
+currentTrackIndex = detectedTrackIndex;
+} else {
+audio.setAttribute("src", tracks[currentTrackIndex].src);
+}
+if (songTitleEl) {
+songTitleEl.textContent = tracks[currentTrackIndex].title;
+}
+
+let rafId = null;
+
+const pickRandomNextTrackIndex = () => {
+if (tracks.length <= 1) return currentTrackIndex;
+let nextIndex = currentTrackIndex;
+while (nextIndex === currentTrackIndex) {
+nextIndex = Math.floor(Math.random() * tracks.length);
+}
+return nextIndex;
+};
+
+const playTrackByIndex = async (trackIndex, forcePlay = false) => {
+if (trackIndex < 0 || trackIndex >= tracks.length) return;
+const shouldPlay = forcePlay || !audio.paused || audio.ended;
+
+currentTrackIndex = trackIndex;
+audio.setAttribute("src", tracks[currentTrackIndex].src);
+if (songTitleEl) {
+songTitleEl.textContent = tracks[currentTrackIndex].title;
+}
+audio.currentTime = 0;
+audio.load();
+updateVisualState();
+
+if (shouldPlay) {
+try {
+await audio.play();
+startRaf();
+} catch (err) {
+console.warn("Audio playback failed:", err);
+}
+}
+};
+
+const updateVisualState = () => {
+const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+const current = Number.isFinite(audio.currentTime) ? audio.currentTime : 0;
+const ratio = duration > 0 ? Math.min(1, Math.max(0, current / duration)) : 0;
+const percent = `${ratio * 100}%`;
+
+progressFill.style.width = percent;
+progressThumb.style.left = percent;
+currentTimeEl.textContent = formatTime(current);
+totalTimeEl.textContent = formatTime(duration);
+playBtn.classList.toggle("is-playing", !audio.paused && !audio.ended);
+playBtn.setAttribute("aria-label", audio.paused || audio.ended ? "Play soundtrack" : "Pause soundtrack");
+};
+
+const stopRaf = () => {
+if (rafId !== null) {
+window.cancelAnimationFrame(rafId);
+rafId = null;
+}
+};
+
+const startRaf = () => {
+stopRaf();
+const tick = () => {
+updateVisualState();
+if (!audio.paused && !audio.ended) {
+rafId = window.requestAnimationFrame(tick);
+}
+};
+rafId = window.requestAnimationFrame(tick);
+};
+
+const seekToClientX = (clientX) => {
+const rect = progressBtn.getBoundingClientRect();
+if (rect.width <= 0 || !Number.isFinite(audio.duration)) return;
+const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+audio.currentTime = ratio * audio.duration;
+updateVisualState();
+};
+
+playBtn.addEventListener("click", async () => {
+try {
+if (audio.paused || audio.ended) {
+await audio.play();
+startRaf();
+} else {
+audio.pause();
+stopRaf();
+}
+updateVisualState();
+} catch (err) {
+console.warn("Audio playback failed:", err);
+}
+});
+
+prevBtn?.addEventListener("click", () => {
+audio.currentTime = Math.max(0, audio.currentTime - 10);
+updateVisualState();
+});
+
+nextBtn?.addEventListener("click", async () => {
+const nextTrackIndex = pickRandomNextTrackIndex();
+await playTrackByIndex(nextTrackIndex, true);
+});
+
+repeatBtn?.addEventListener("click", () => {
+audio.loop = !audio.loop;
+repeatBtn.classList.toggle("is-active", audio.loop);
+});
+
+favouriteBtn?.addEventListener("click", () => {
+favouriteBtn.classList.toggle("is-active");
+});
+
+progressBtn.addEventListener("click", (e) => {
+seekToClientX(e.clientX);
+});
+
+progressBtn.addEventListener("keydown", (e) => {
+if (e.key === "ArrowRight") {
+e.preventDefault();
+audio.currentTime = Math.min((audio.duration || 0), audio.currentTime + 5);
+updateVisualState();
+} else if (e.key === "ArrowLeft") {
+e.preventDefault();
+audio.currentTime = Math.max(0, audio.currentTime - 5);
+updateVisualState();
+} else if (e.key === "Home") {
+e.preventDefault();
+audio.currentTime = 0;
+updateVisualState();
+} else if (e.key === "End" && Number.isFinite(audio.duration)) {
+e.preventDefault();
+audio.currentTime = audio.duration;
+updateVisualState();
+}
+});
+
+audio.addEventListener("loadedmetadata", updateVisualState);
+audio.addEventListener("durationchange", updateVisualState);
+audio.addEventListener("timeupdate", updateVisualState);
+audio.addEventListener("pause", () => {
+stopRaf();
+updateVisualState();
+});
+audio.addEventListener("play", startRaf);
+audio.addEventListener("ended", () => {
+stopRaf();
+if (!audio.loop && tracks.length > 1) {
+const nextTrackIndex = pickRandomNextTrackIndex();
+void playTrackByIndex(nextTrackIndex, true);
+return;
+}
+updateVisualState();
+});
+
+repeatBtn?.classList.toggle("is-active", audio.loop);
+updateVisualState();
+player.dataset.initialized = "true";
+});
+}
+
+function initMusicOverlayFab() {
+const wrap = document.querySelector("[data-music-overlay]");
+const btn = document.getElementById("musicOverlayFab");
+const ripple = btn?.querySelector(".music-overlay-fab__ripple");
+if (!wrap || !btn || !ripple) return;
+
+if (wrap.dataset.initialized === "true") return;
+wrap.dataset.initialized = "true";
+
+const getAudio = () => document.querySelector(".music-player__audio");
+
+const reveal = () => {
+if (!getAudio()) {
+wrap.setAttribute("hidden", "");
+return;
+}
+wrap.removeAttribute("hidden");
+};
+
+const triggerRipple = () => {
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+return;
+}
+ripple.classList.remove("is-active");
+// Reflow so repeated taps retrigger the animation.
+void ripple.offsetWidth;
+ripple.classList.add("is-active");
+};
+
+ripple.addEventListener("animationend", () => {
+ripple.classList.remove("is-active");
+});
+
+const syncFromAudio = () => {
+const audio = getAudio();
+if (!audio) {
+wrap.setAttribute("hidden", "");
+return;
+}
+wrap.removeAttribute("hidden");
+const muted = audio.muted;
+btn.classList.toggle("is-muted", muted);
+btn.setAttribute("aria-pressed", muted ? "true" : "false");
+btn.setAttribute("aria-label", muted ? "Unmute soundtrack" : "Mute soundtrack");
+};
+
+btn.addEventListener("click", () => {
+const audio = getAudio();
+if (!audio) return;
+triggerRipple();
+audio.muted = !audio.muted;
+syncFromAudio();
+});
+
+document.addEventListener(
+"volumechange",
+() => {
+syncFromAudio();
+},
+true
+);
+
+reveal();
+syncFromAudio();
+}
+
+function initHeadingTypewriterForWrap(wrap) {
+if (!wrap || wrap.dataset.typewriterObserver === "1") return;
+
+const lines = wrap.querySelectorAll(":scope > p[data-typewriter-text]");
+if (lines.length !== 2) return;
+const scriptEl = lines[0];
+const mainEl = lines[1];
+
+const scriptText = scriptEl.getAttribute("data-typewriter-text") || "";
+const mainText = mainEl.getAttribute("data-typewriter-text") || "";
+
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (reducedMotion) {
+scriptEl.textContent = scriptText;
+mainEl.textContent = mainText;
+wrap.dataset.typewriterObserver = "1";
+return;
+}
+
+scriptEl.textContent = "";
+mainEl.textContent = "";
+
+let started = false;
+
+function setCaret(el, on) {
+scriptEl.classList.toggle("is-typewriter-caret", on && el === scriptEl);
+mainEl.classList.toggle("is-typewriter-caret", on && el === mainEl);
+}
+
+function typeLine(el, text, charMs, onDone) {
+let i = 0;
+el.textContent = "";
+setCaret(el, true);
+const step = () => {
+if (i < text.length) {
+el.textContent += text.charAt(i);
+i += 1;
+window.setTimeout(step, charMs);
+} else {
+setCaret(el, false);
+onDone();
+}
+};
+step();
+}
+
+const observer = new IntersectionObserver(
+(entries) => {
+for (const entry of entries) {
+if (!entry.isIntersecting || started) continue;
+started = true;
+observer.disconnect();
+const scriptSpeed = 150;
+const mainSpeed = 108;
+typeLine(scriptEl, scriptText, scriptSpeed, () => {
+window.setTimeout(() => {
+typeLine(mainEl, mainText, mainSpeed, () => {
+wrap.dataset.typewriterDone = "1";
+});
+}, 220);
+});
+}
+},
+{ threshold: 0.45, rootMargin: "0px 0px -8% 0px" }
+);
+
+wrap.dataset.typewriterObserver = "1";
+observer.observe(wrap);
+}
+
+function initAllHeadingTypewriters() {
+document
+.querySelectorAll(".details-title-wrap, .events-title-wrap, .registry-title-wrap")
+.forEach((wrap) => initHeadingTypewriterForWrap(wrap));
+}
+
+function openInvitation() {
+if (isOpening) return;
+isOpening = true;
+
+seal.classList.add("is-hidden");
+envelope.classList.add("open");
+invite.classList.add("show");
+document.body.classList.add("invite-open");
+startHeaderCountdown();
+startWeddingCountdown();
+initPromiseCarousel();
+initMusicExperience();
+initMusicOverlayFab();
+initAllHeadingTypewriters();
+const openingTrackAudio = document.querySelector(".music-player__audio");
+if (openingTrackAudio) {
+openingTrackAudio.currentTime = 0;
+openingTrackAudio.play().catch((err) => {
+console.warn("Opening soundtrack playback failed:", err);
+});
+}
+
+window.setTimeout(() => {
+envelope.style.display = "none";
+}, CURTAIN_REVEAL_MS);
+}
+
+// If the invite is already visible (e.g. refreshed while open), start countdown.
+if (invite.classList.contains("show")) {
+document.body.classList.add("invite-open");
+startHeaderCountdown();
+startWeddingCountdown();
+initPromiseCarousel();
+initMusicExperience();
+initMusicOverlayFab();
+initAllHeadingTypewriters();
+}
+
+seal.addEventListener("click", (e) => {
+e.stopPropagation();
+openInvitation();
+});
+
+seal.addEventListener("keydown", (e) => {
+if (e.key !== "Enter" && e.key !== " ") return;
+e.preventDefault();
+e.stopPropagation();
+openInvitation();
+});
+
+envelope.addEventListener("click", () => {
+openInvitation();
+});
+
+// Upward scroll/swipe should also open the curtain.
+let startY = null;
+let pointerStartY = null;
+const UPWARD_THRESHOLD_PX = 24;
+
+function handleUpwardDelta(deltaY) {
+if (isOpening) return;
+if (deltaY < -UPWARD_THRESHOLD_PX) {
+openInvitation();
+}
+}
+
+envelope.addEventListener("pointerdown", (e) => {
+if (isOpening) return;
+pointerStartY = e.clientY;
+});
+
+envelope.addEventListener("pointermove", (e) => {
+if (isOpening || pointerStartY === null) return;
+const dy = e.clientY - pointerStartY;
+handleUpwardDelta(dy);
+});
+
+envelope.addEventListener("pointerup", () => {
+pointerStartY = null;
+});
+
+envelope.addEventListener("pointercancel", () => {
+pointerStartY = null;
+});
+
+envelope.addEventListener("touchstart", (e) => {
+if (isOpening || e.touches.length === 0) return;
+startY = e.touches[0].clientY;
+}, { passive: true });
+
+envelope.addEventListener("touchmove", (e) => {
+if (isOpening || startY === null || e.touches.length === 0) return;
+const dy = e.touches[0].clientY - startY;
+if (dy < -UPWARD_THRESHOLD_PX) {
+e.preventDefault();
+openInvitation();
+startY = null;
+}
+}, { passive: false });
+
+envelope.addEventListener("touchend", () => {
+startY = null;
+}, { passive: true });
+
+envelope.addEventListener("wheel", (e) => {
+if (isOpening) return;
+if (e.deltaY < -8) {
+e.preventDefault();
+openInvitation();
+}
+}, { passive: false });
+
+window.addEventListener("wheel", (e) => {
+if (isOpening || envelope.style.display === "none") return;
+if (e.deltaY < -8) {
+e.preventDefault();
+openInvitation();
+}
+}, { passive: false });
+
+window.addEventListener("touchmove", (e) => {
+if (isOpening || envelope.style.display === "none" || startY === null || e.touches.length === 0) return;
+const dy = e.touches[0].clientY - startY;
+if (dy < -UPWARD_THRESHOLD_PX) {
+e.preventDefault();
+openInvitation();
+startY = null;
+}
+}, { passive: false });
+
+window.addEventListener("touchend", () => {
+startY = null;
+});
+</script>
 
 </body>
 
 </html>
+
